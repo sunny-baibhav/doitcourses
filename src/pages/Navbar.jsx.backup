@@ -1,0 +1,1422 @@
+import React from 'react'
+
+const Navbar = () => {
+  return (
+   <div className="navbar">
+  <div data-w-id="d2413273-24dc-0908-0ca4-8e1474d22558" className="banner"  style={{
+       backgroundColor:  "#0a421e"
+      }}>
+    <a
+      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:d2413273-24dc-0908-0ca4-8e1474d22559"
+      data-wf-ao-click-engagement-tracking="true"
+      data-wf-element-id="d2413273-24dc-0908-0ca4-8e1474d22559"
+      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+      href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+      className="banner-wrapper w-inline-block"
+      rel="noopener"
+     
+    >
+      <div className="caption">
+        NEW: Software update for <span className="change-month">October</span>!
+      </div>
+    </a>
+    <img
+      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb830893353a116fc492d6_close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+      loading="lazy"
+      width={17}
+      data-w-id="83c91c25-ac13-f413-d7e8-5e60f244038c"
+      alt=""
+      className="x"
+    />
+  </div>
+  <div
+    data-collapse="medium"
+    data-animation="default"
+    data-duration={400}
+    data-easing="ease"
+    data-easing2="ease"
+    role="banner"
+    className="nav-bar w-nav"
+  style={{
+  willChange: "background",
+  backgroundColor: "#ffffffff"
+}}
+
+  >
+    <div className="nav-container">
+      <a
+        href="/"
+        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:d2413273-24dc-0908-0ca4-8e1474d22561"
+        data-wf-ao-click-engagement-tracking="true"
+        data-wf-element-id="d2413273-24dc-0908-0ca4-8e1474d22561"
+        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+        aria-current="page"
+        className="nav-logo-link w-inline-block w--current"
+      >
+        <img
+          src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb83e643829211fbb71732_logo.png"
+          loading="lazy"
+          sizes="(max-width: 1500px) 100vw, 1500px"
+          srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb83e643829211fbb71732_logo-p-500.png 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb83e643829211fbb71732_logo-p-800.png 800w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb83e643829211fbb71732_logo-p-1080.png 1080w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb83e643829211fbb71732_logo.png 1500w"
+          alt=""
+          className="logo"
+        />
+      </a>
+      <nav role="navigation" className="nav-menu w-nav-menu">
+        <div
+          data-delay={0}
+          data-hover="false"
+          data-w-id="a2704239-575f-319d-bf56-c54a24f209cf"
+          className="nav-dropdown w-dropdown"
+        >
+          <div
+            data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209d0"
+            data-wf-ao-click-engagement-tracking="true"
+            data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209d0"
+            data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+            className="nav-toggle w-dropdown-toggle"
+            id="w-dropdown-toggle-0"
+            aria-controls="w-dropdown-list-0"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            role="button"
+            tabIndex={0}
+          >
+            <div>Features</div>
+            <div
+              className="icon-small w-embed"
+              style={{
+                transform:
+                  "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                transformStyle: "preserve-3d"
+              }}
+            >
+              <svg
+                width={16}
+                height={16}
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_1111_3904)">
+                  <rect
+                    x={16}
+                    y={16}
+                    width={16}
+                    height={16}
+                    rx={8}
+                    transform="rotate(-180 16 16)"
+                    fill=""
+                  />
+                  <path
+                    d="M8.4701 10.0001L11.5301 6.94007C11.7901 6.68007 11.7901 6.26007 11.5301 6.00007C11.2701 5.74007 10.8501 5.74007 10.5901 6.00007L7.99676 8.58673L5.4101 6.00007C5.1501 5.74007 4.7301 5.74007 4.4701 6.00007C4.2101 6.26007 4.2101 6.68007 4.4701 6.94007L7.5301 10.0001C7.78343 10.2601 8.2101 10.2601 8.4701 10.0001Z"
+                    fill="currentColor"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1111_3904">
+                    <rect
+                      x={16}
+                      y={16}
+                      width={16}
+                      height={16}
+                      rx={8}
+                      transform="rotate(-180 16 16)"
+                      fill="white"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <nav
+            className="nav-list w-dropdown-list"
+            id="w-dropdown-list-0"
+            aria-labelledby="w-dropdown-toggle-0"
+            style={{ opacity: 0 }}
+          >
+            <div className="nav-dropdown-base-c">
+              <div className="nav-bottom">
+                <div className="paragraph-small black">Popular Features</div>
+                <div className="_2-grid">
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209da"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209da"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="/products"
+                    className="wrap-v-regular menu-features w-inline-block"
+                    tabIndex={0}
+                  >
+                    <div className="div-block">
+                      <img
+                        loading="lazy"
+                        height={50}
+                        alt=""
+                        src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377b03a610985c2edad6d_Group%2012.avif"
+                        className="h3-image nav"
+                      />
+                    </div>
+                    <div>Premium courses built by experts</div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209e4"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209e4"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="/products"
+                    className="wrap-v-regular menu-features w-inline-block"
+                    tabIndex={0}
+                  >
+                    <div className="div-block">
+                      <img
+                        sizes="100vw"
+                        height={50}
+                        alt=""
+                        src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5675194eaa91d49e4_Group%2017.avif"
+                        loading="lazy"
+                        srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5675194eaa91d49e4_Group%2017-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5675194eaa91d49e4_Group%2017.avif 2074w"
+                        className="h3-image nav"
+                      />
+                    </div>
+                    <div>Customise, white-label &amp; make it yours</div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209df"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209df"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="/products"
+                    className="wrap-v-regular menu-features w-inline-block"
+                    tabIndex={0}
+                  >
+                    <div className="div-block">
+                      <img
+                        sizes="100vw"
+                        height={50}
+                        alt=""
+                        src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5de41c8f1ef291a01_Group%2018.avif"
+                        loading="lazy"
+                        srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5de41c8f1ef291a01_Group%2018-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5de41c8f1ef291a01_Group%2018.avif 2089w"
+                        className="h3-image nav"
+                      />
+                    </div>
+                    <div>Instant 2k+ member community</div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209e9"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209e9"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="#content-library"
+                    className="wrap-v-regular menu-features w-inline-block"
+                    tabIndex={0}
+                  >
+                    <div className="div-block">
+                      <img
+                        sizes="100vw"
+                        height={50}
+                        alt=""
+                        src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5def8a373076506a0_Group%2013.avif"
+                        loading="lazy"
+                        srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5def8a373076506a0_Group%2013-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5def8a373076506a0_Group%2013.avif 2323w"
+                        className="h3-image nav"
+                      />
+                    </div>
+                    <div>25k+ pre-edited videos to go viral</div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209ee"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209ee"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="#landing-page"
+                    className="wrap-v-regular menu-features w-inline-block"
+                    tabIndex={0}
+                  >
+                    <div className="div-block">
+                      <img
+                        sizes="100vw"
+                        height={50}
+                        alt=""
+                        src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5a7894ae9b01ab827_Group%2015.avif"
+                        loading="lazy"
+                        srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5a7894ae9b01ab827_Group%2015-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5a7894ae9b01ab827_Group%2015.avif 2179w"
+                        className="h3-image nav"
+                      />
+                    </div>
+                    <div>Plug &amp; play landing pages in 2 mins</div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209f3"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209f3"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="wrap-v-regular menu-features w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <div className="div-block">
+                      <img
+                        sizes="100vw"
+                        height={50}
+                        alt=""
+                        src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c518a9ed71db323afa_Group%2014.avif"
+                        loading="lazy"
+                        srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c518a9ed71db323afa_Group%2014-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c518a9ed71db323afa_Group%2014.avif 2020w"
+                        className="h3-image nav"
+                      />
+                    </div>
+                    <div>Built-in AI course content assistants</div>
+                  </a>
+                </div>
+              </div>
+              <div className="nav-top hide">
+                <div className="caption-bold">More Resources</div>
+                <div className="nav-link-wrapper">
+                  <div className="w-layout-grid nav-link-grid">
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f209fd"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f209fd"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H14V8H18V20ZM12 17C10.9 17 10 16.1 10 15V9.5C10 9.22 10.22 9 10.5 9C10.78 9 11 9.22 11 9.5V15H13V9.5C13 8.12 11.88 7 10.5 7C9.12 7 8 8.12 8 9.5V15C8 17.21 9.79 19 12 19C14.21 19 16 17.21 16 15V11H14V15C14 16.1 13.1 17 12 17Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Content Library</div>
+                        <div className="paragraph-small">
+                          Go Viral on Social Media
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a05"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a05"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.99 19.0051L4.62 13.2751L3 14.5351L12 21.5351L21 14.5351L19.37 13.2651L11.99 19.0051ZM12 16.4651L19.36 10.7351L21 9.46509L12 2.46509L3 9.46509L4.63 10.7351L12 16.4651ZM12 4.99509L17.74 9.46509L12 13.9351L6.26 9.46509L12 4.99509Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Landing Pages</div>
+                        <div className="paragraph-small">
+                          Plug and play product websites
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a0d"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a0d"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M19.5 4C20.33 4 21 4.67 21 5.5V18.5C21 19.33 20.33 20 19.5 20C18.67 20 18 19.33 18 18.5V5.5C18 4.67 18.67 4 19.5 4ZM4.5 13C5.33 13 6 13.67 6 14.5V18.5C6 19.33 5.33 20 4.5 20C3.67 20 3 19.33 3 18.5V14.5C3 13.67 3.67 13 4.5 13ZM15.5 4C16.33 4 17 4.67 17 5.5C17 6.33 16.33 7 15.5 7C14.67 7 14 6.33 14 5.5C14 4.67 14.67 4 15.5 4ZM11.5 5C12.33 5 13 5.67 13 6.5V7.5C13 8.33 12.33 9 11.5 9C10.67 9 10 8.33 10 7.5V6.5C10 5.67 10.67 5 11.5 5ZM8.5 10C9.33 10 10 10.67 10 11.5V12.5C10 13.33 9.33 14 8.5 14C7.67 14 7 13.33 7 12.5V11.5C7 10.67 7.67 10 8.5 10Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Analytics</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a15"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a15"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Graphical Data</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a1d"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a1d"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 8.5C19.55 8.5 18.74 9.94 19.07 11.01L15.52 14.57C15.22 14.48 14.78 14.48 14.48 14.57L11.93 12.02C12.27 10.95 11.46 9.5 10 9.5C8.55 9.5 7.73 10.94 8.07 12.02L3.51 16.57C2.44 16.24 1 17.05 1 18.5C1 19.6 1.9 20.5 3 20.5C4.45 20.5 5.26 19.06 4.93 17.99L9.48 13.43C9.78 13.52 10.22 13.52 10.52 13.43L13.07 15.98C12.73 17.05 13.54 18.5 15 18.5C16.45 18.5 17.27 17.06 16.93 15.98L20.49 12.43C21.56 12.76 23 11.95 23 10.5C23 9.4 22.1 8.5 21 8.5Z"
+                              fill="#235ae9"
+                            />
+                            <path
+                              d="M15 9.5L15.94 7.43L18 6.5L15.94 5.57L15 3.5L14.08 5.57L12 6.5L14.08 7.43L15 9.5Z"
+                              fill="#235ae95"
+                            />
+                            <path
+                              d="M3.5 11.5L4 9.5L6 9L4 8.5L3.5 6.5L3 8.5L1 9L3 9.5L3.5 11.5Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Collaborate</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a25"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a25"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16 15.62C16.6186 15.62 17.12 15.1186 17.12 14.5C17.12 13.8814 16.6186 13.38 16 13.38C15.3814 13.38 14.88 13.8814 14.88 14.5C14.88 15.1186 15.3814 15.62 16 15.62Z"
+                              fill="#235ae9"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M16 16.5C15.27 16.5 13.81 16.86 13.76 17.58C14.26 18.29 15.08 18.75 16 18.75C16.92 18.75 17.74 18.29 18.24 17.58C18.19 16.86 16.73 16.5 16 16.5Z"
+                              fill="#6173E5"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M17 10.09V5.27L9.5 2L2 5.27V10.18C2 14.72 5.2 18.97 9.5 20C10.05 19.87 10.58 19.68 11.1 19.45C12.18 20.99 13.97 22 16 22C19.31 22 22 19.31 22 16C22 13.03 19.84 10.57 17 10.09ZM10 16C10 16.56 10.08 17.11 10.23 17.62C9.99 17.73 9.75 17.84 9.5 17.92C6.33 16.92 4 13.68 4 10.18V6.58L9.5 4.18L15 6.58V10.09C12.16 10.57 10 13.03 10 16ZM16 20C13.79 20 12 18.21 12 16C12 13.79 13.79 12 16 12C18.21 12 20 13.79 20 16C20 18.21 18.21 20 16 20Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Data Layers</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div
+          data-delay={0}
+          data-hover="false"
+          data-w-id="a2704239-575f-319d-bf56-c54a24f20a2d"
+          className="nav-dropdown w-dropdown"
+        >
+          <div
+            data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a2e"
+            data-wf-ao-click-engagement-tracking="true"
+            data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a2e"
+            data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+            className="nav-toggle w-dropdown-toggle"
+            id="w-dropdown-toggle-1"
+            aria-controls="w-dropdown-list-1"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            role="button"
+            tabIndex={0}
+          >
+            <div>Courses</div>
+            <div
+              className="icon-small w-embed"
+              style={{
+                transform:
+                  "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                transformStyle: "preserve-3d"
+              }}
+            >
+              <svg
+                width={16}
+                height={16}
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_1111_3904)">
+                  <rect
+                    x={16}
+                    y={16}
+                    width={16}
+                    height={16}
+                    rx={8}
+                    transform="rotate(-180 16 16)"
+                    fill=""
+                  />
+                  <path
+                    d="M8.4701 10.0001L11.5301 6.94007C11.7901 6.68007 11.7901 6.26007 11.5301 6.00007C11.2701 5.74007 10.8501 5.74007 10.5901 6.00007L7.99676 8.58673L5.4101 6.00007C5.1501 5.74007 4.7301 5.74007 4.4701 6.00007C4.2101 6.26007 4.2101 6.68007 4.4701 6.94007L7.5301 10.0001C7.78343 10.2601 8.2101 10.2601 8.4701 10.0001Z"
+                    fill="currentColor"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1111_3904">
+                    <rect
+                      x={16}
+                      y={16}
+                      width={16}
+                      height={16}
+                      rx={8}
+                      transform="rotate(-180 16 16)"
+                      fill="white"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <nav
+            className="nav-list w-dropdown-list"
+            id="w-dropdown-list-1"
+            aria-labelledby="w-dropdown-toggle-1"
+            style={{ opacity: 0 }}
+          >
+            <div className="nav-dropdown-base-c">
+              <div className="nav-bottom">
+                <div className="paragraph-small black">
+                  Our Premium Courses &amp; Communities
+                </div>
+                <div className="w-layout-grid grid hide">
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a38"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a38"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      sizes="100vw"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819bdbe100a54cf952ff077_ecom.jpg"
+                      loading="lazy"
+                      srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819bdbe100a54cf952ff077_ecom-p-500.jpg 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819bdbe100a54cf952ff077_ecom-p-800.jpg 800w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819bdbe100a54cf952ff077_ecom.jpg 1068w"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">Ecom Prodigy</div>
+                        <div className="paragraph-small">
+                          Dropshipping Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a40"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a40"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e50b71cb8e13d42502fe_Frame%2056.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">
+                          Copywriting Catalyst
+                        </div>
+                        <div className="paragraph-small">
+                          Copywriting Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a48"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a48"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e5121026ac6ecfef6fd4_Frame%2064.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">
+                          Entrepreneur Academy
+                        </div>
+                        <div className="paragraph-small">Paid Community</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a50"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a50"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e5121026ac6ecfef6fc8_Frame%2057.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">Agency Blueprint</div>
+                        <div className="paragraph-small">SMMA Course</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a58"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a58"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e511f51e4b33f43b193f_Frame%2058.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">Market Mastery</div>
+                        <div className="paragraph-small">
+                          Day Trading Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a60"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a60"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e51155528a4510a79a5d_Frame%2062.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">Ghost Creator</div>
+                        <div className="paragraph-small">
+                          YouTube Automation Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a68"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a68"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e511f45bdda00cfb6f5e_Frame%2059.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">Amazon Dropship Pro</div>
+                        <div className="paragraph-small">
+                          Amazon Dropshipping Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a70"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a70"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      sizes="100vw"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e511d51be076470e1f0a_Frame%2061.avif"
+                      loading="lazy"
+                      srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e511d51be076470e1f0a_Frame%2061-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e511d51be076470e1f0a_Frame%2061.avif 1068w"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">Six Figure Closer</div>
+                        <div className="paragraph-small">
+                          High-Ticket Closing Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a78"
+                    data-wf-ao-click-engagement-tracking="true"
+                    data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a78"
+                    data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                    className="nav-feature-link-l w-inline-block"
+                    tabIndex={0}
+                    rel="noopener"
+                  >
+                    <img
+                      width={125}
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e511566cfed70f74f1e0_Frame%2063.avif"
+                      className="nav-image"
+                    />
+                    <div className="nav-link-icon">
+                      <div>
+                        <div className="nav-link-text">1-Click</div>
+                        <div className="paragraph-small">
+                          Affiliate Marketing Course
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="w-dyn-list">
+                  <div role="list" className="grid menu w-dyn-items">
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            dropshipping course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-0"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%22683693a72a0581473547d2cc%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/ecom-prodigy"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            SMMA course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-1"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226836a7ed95c44d03dc8e1385%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/agency-blueprint"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836c25abef4c099670198b3_Frame%2059.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            Amazon FBA course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-2"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226836c279fa0b25a3fedec517%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/amazon-dropship-pro"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            remote closing course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-3"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226837ee683ef3f47c8201b4cf%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/six-figure-closer"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f70e4496349db5dc2944_Frame%2064.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            done-for-you community
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-4"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226837f721c058c56d3b5d2c3f%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/entrepreneurs-academy"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f77ddad3ad5c72a0f45c_Frame%2062.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            Youtube automation course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-5"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226837f7923ef3f47c8206d8c4%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/ghost-creator"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f7e2c64b0c78ddc354f8_Frame%2058.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            day trading course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-6"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226837f8037f87245c9ef0b852%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/market-mastery"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8573bd40e5c97b92e97_Frame%2056.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            copywriting course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-7"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226837f87ac058c56d3b5e0aab%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/copywriting-catalyst"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                    <div
+                      role="listitem"
+                      className="nav-feature-link-l w-dyn-item"
+                    >
+                      <img
+                        loading="lazy"
+                        src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo.png"
+                        alt=""
+                        sizes="100vw"
+                        srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f8aff8bc418e4ef46e02_moneygramlogo.png 2136w"
+                        className="nav-image"
+                      />
+                      <div className="nav-link-icon">
+                        <div>
+                          <div className="paragraph-small title-case">
+                            Instagram theme page course
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8a_instance-8"
+                        data-wf-ao-click-engagement-tracking="true"
+                        data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8a"
+                        data-wf-cms-context="%5B%7B%22collectionId%22%3A%2268369353418c3898194faa32%22%2C%22itemId%22%3A%226837f8cda488565d5f9d9d04%22%7D%5D"
+                        data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                        href="/products/money-gram"
+                        className="absolute-link w-inline-block"
+                        tabIndex={0}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a
+                  data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a8e"
+                  data-wf-ao-click-engagement-tracking="true"
+                  data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a8e"
+                  data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                  href="/products"
+                  data-wf-event-ids={157035618}
+                  className="button-secondary nav _100 w-inline-block"
+                  tabIndex={0}
+                >
+                  <div>Explore all courses</div>
+                </a>
+              </div>
+              <div className="nav-top hide">
+                <div className="caption-bold">More Resources</div>
+                <div className="nav-link-wrapper">
+                  <div className="w-layout-grid nav-link-grid">
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a96"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a96"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H14V8H18V20ZM12 17C10.9 17 10 16.1 10 15V9.5C10 9.22 10.22 9 10.5 9C10.78 9 11 9.22 11 9.5V15H13V9.5C13 8.12 11.88 7 10.5 7C9.12 7 8 8.12 8 9.5V15C8 17.21 9.79 19 12 19C14.21 19 16 17.21 16 15V11H14V15C14 16.1 13.1 17 12 17Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Content Library</div>
+                        <div className="paragraph-small">
+                          Go Viral on Social Media
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20a9e"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20a9e"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.99 19.0051L4.62 13.2751L3 14.5351L12 21.5351L21 14.5351L19.37 13.2651L11.99 19.0051ZM12 16.4651L19.36 10.7351L21 9.46509L12 2.46509L3 9.46509L4.63 10.7351L12 16.4651ZM12 4.99509L17.74 9.46509L12 13.9351L6.26 9.46509L12 4.99509Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Landing Pages</div>
+                        <div className="paragraph-small">
+                          Plug and play product websites
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20aa6"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20aa6"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M19.5 4C20.33 4 21 4.67 21 5.5V18.5C21 19.33 20.33 20 19.5 20C18.67 20 18 19.33 18 18.5V5.5C18 4.67 18.67 4 19.5 4ZM4.5 13C5.33 13 6 13.67 6 14.5V18.5C6 19.33 5.33 20 4.5 20C3.67 20 3 19.33 3 18.5V14.5C3 13.67 3.67 13 4.5 13ZM15.5 4C16.33 4 17 4.67 17 5.5C17 6.33 16.33 7 15.5 7C14.67 7 14 6.33 14 5.5C14 4.67 14.67 4 15.5 4ZM11.5 5C12.33 5 13 5.67 13 6.5V7.5C13 8.33 12.33 9 11.5 9C10.67 9 10 8.33 10 7.5V6.5C10 5.67 10.67 5 11.5 5ZM8.5 10C9.33 10 10 10.67 10 11.5V12.5C10 13.33 9.33 14 8.5 14C7.67 14 7 13.33 7 12.5V11.5C7 10.67 7.67 10 8.5 10Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Analytics</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20aae"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20aae"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Graphical Data</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20ab6"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20ab6"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 8.5C19.55 8.5 18.74 9.94 19.07 11.01L15.52 14.57C15.22 14.48 14.78 14.48 14.48 14.57L11.93 12.02C12.27 10.95 11.46 9.5 10 9.5C8.55 9.5 7.73 10.94 8.07 12.02L3.51 16.57C2.44 16.24 1 17.05 1 18.5C1 19.6 1.9 20.5 3 20.5C4.45 20.5 5.26 19.06 4.93 17.99L9.48 13.43C9.78 13.52 10.22 13.52 10.52 13.43L13.07 15.98C12.73 17.05 13.54 18.5 15 18.5C16.45 18.5 17.27 17.06 16.93 15.98L20.49 12.43C21.56 12.76 23 11.95 23 10.5C23 9.4 22.1 8.5 21 8.5Z"
+                              fill="#235ae9"
+                            />
+                            <path
+                              d="M15 9.5L15.94 7.43L18 6.5L15.94 5.57L15 3.5L14.08 5.57L12 6.5L14.08 7.43L15 9.5Z"
+                              fill="#235ae95"
+                            />
+                            <path
+                              d="M3.5 11.5L4 9.5L6 9L4 8.5L3.5 6.5L3 8.5L1 9L3 9.5L3.5 11.5Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Collaborate</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20abe"
+                      data-wf-ao-click-engagement-tracking="true"
+                      data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20abe"
+                      data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+                      href="#"
+                      className="nav-link-icon w-inline-block"
+                      tabIndex={0}
+                    >
+                      <div className="nav-icon-s">
+                        <div className="icon-regular w-embed">
+                          <svg
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M16 15.62C16.6186 15.62 17.12 15.1186 17.12 14.5C17.12 13.8814 16.6186 13.38 16 13.38C15.3814 13.38 14.88 13.8814 14.88 14.5C14.88 15.1186 15.3814 15.62 16 15.62Z"
+                              fill="#235ae9"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M16 16.5C15.27 16.5 13.81 16.86 13.76 17.58C14.26 18.29 15.08 18.75 16 18.75C16.92 18.75 17.74 18.29 18.24 17.58C18.19 16.86 16.73 16.5 16 16.5Z"
+                              fill="#6173E5"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M17 10.09V5.27L9.5 2L2 5.27V10.18C2 14.72 5.2 18.97 9.5 20C10.05 19.87 10.58 19.68 11.1 19.45C12.18 20.99 13.97 22 16 22C19.31 22 22 19.31 22 16C22 13.03 19.84 10.57 17 10.09ZM10 16C10 16.56 10.08 17.11 10.23 17.62C9.99 17.73 9.75 17.84 9.5 17.92C6.33 16.92 4 13.68 4 10.18V6.58L9.5 4.18L15 6.58V10.09C12.16 10.57 10 13.03 10 16ZM16 20C13.79 20 12 18.21 12 16C12 13.79 13.79 12 16 12C18.21 12 20 13.79 20 16C20 18.21 18.21 20 16 20Z"
+                              fill="#235ae9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="nav-link-text">Data Layers</div>
+                        <div className="paragraph-small">
+                          Short description here
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <a
+          href="https://www.dropcourse.com/#pricing"
+          data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20ac6"
+          data-wf-ao-click-engagement-tracking="true"
+          data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20ac6"
+          data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+          className="nav-link w-nav-link"
+        >
+          Pricing
+        </a>
+        <a
+          href="https://app.dropcourse.com/"
+          data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20ac8"
+          data-wf-ao-click-engagement-tracking="true"
+          data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20ac8"
+          data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+          className="nav-link desktop-hide w-nav-link"
+        >
+          Log In
+        </a>
+        <a
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:a2704239-575f-319d-bf56-c54a24f20aca"
+          data-wf-ao-click-engagement-tracking="true"
+          data-wf-element-id="a2704239-575f-319d-bf56-c54a24f20aca"
+          data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+          data-wf-event-ids={157035618}
+          className="button-primary nav desktop-hide menu w-nav-link"
+          rel="noopener"
+        >
+          <strong>Start now</strong>
+        </a>
+      </nav>
+      <div className="nav-button-group">
+        <a
+          data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:d2413273-24dc-0908-0ca4-8e1474d22652"
+          data-wf-ao-click-engagement-tracking="true"
+          data-wf-element-id="d2413273-24dc-0908-0ca4-8e1474d22652"
+          data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+          href="https://app.dropcourse.com/"
+          className="button-secondary nav mobile-hide w-inline-block"
+        >
+          <div>Log in</div>
+        </a>
+        <a
+          data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:d2413273-24dc-0908-0ca4-8e1474d22655"
+          data-wf-ao-click-engagement-tracking="true"
+          data-wf-element-id="d2413273-24dc-0908-0ca4-8e1474d22655"
+          data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          data-wf-event-ids={157035618}
+          className="button-primary nav mobile-hide w-inline-block"
+          rel="noopener"
+        >
+          <div>
+            Start now <span className="arrow">→</span>
+          </div>
+        </a>
+        <div
+          data-w-id="d2413273-24dc-0908-0ca4-8e1474d2265c"
+          className="nav-menu-button w-nav-button"
+          style={{ userSelect: "text", opacity: 1 }}
+          aria-label="menu"
+          role="button"
+          tabIndex={0}
+          aria-controls="w-nav-overlay-0"
+          aria-haspopup="menu"
+          aria-expanded="false"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/680cb95e72d2c51bf86feeda_menu_24dp_000000_FILL1_wght200_GRAD0_opsz24.svg"
+            loading="lazy"
+            width={26}
+            alt=""
+          />
+        </div>
+        <a
+          data-wf-native-id-path="d2413273-24dc-0908-0ca4-8e1474d2265f:d2413273-24dc-0908-0ca4-8e1474d22658"
+          data-wf-ao-click-engagement-tracking="true"
+          data-wf-element-id="d2413273-24dc-0908-0ca4-8e1474d22658"
+          data-wf-component-context="%5B%7B%22componentId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d22557%22%2C%22instanceId%22%3A%22d2413273-24dc-0908-0ca4-8e1474d2265f%22%7D%5D"
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          data-wf-event-ids={157035618}
+          className="button-primary nav desktop-hide w-inline-block"
+          rel="noopener"
+        >
+          <div>
+            Start now <span className="arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div className="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0" />
+  </div>
+</div>
+
+  )
+}
+
+export default Navbar

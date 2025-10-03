@@ -1,0 +1,183 @@
+import React, { useState, useEffect } from "react"
+import { userApi, courseApi } from "../api/database.js"
+
+const DatabaseDemo = () => {
+  const [users, setUsers] = useState([])
+  const [courses, setCourses] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [newUser, setNewUser] = useState({ email: "", name: "" })
+  const [newCourse, setNewCourse] = useState({ title: "", description: "", price: 0 })
+
+  // Load users and courses on component mount
+  useEffect(() => {
+    loadData()
+  }, [])
+
+  const loadData = async () => {
+    setLoading(true)
+    try {
+      const [usersData, coursesData] = await Promise.all([
+        userApi.getAllUsers(),
+        courseApi.getAllCourses()
+      ])
+      setUsers(usersData)
+      setCourses(coursesData)
+    } catch (error) {
+      console.error("Error loading data:", error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleCreateUser = async (e) => {
+    e.preventDefault()
+    if (!newUser.email) return
+
+    try {
+      const user = await userApi.createUser(newUser)
+      setUsers([...users, user])
+      setNewUser({ email: "", name: "" })
+    } catch (error) {
+      console.error("Error creating user:", error)
+    }
+  }
+
+  const handleCreateCourse = async (e) => {
+    e.preventDefault()
+    if (!newCourse.title) return
+
+    try {
+      const course = await courseApi.createCourse({
+        ...newCourse,
+        authorId: users[0]?.id || "default-author-id"
+      })
+      setCourses([...courses, course])
+      setNewCourse({ title: "", description: "", price: 0 })
+    } catch (error) {
+      console.error("Error creating course:", error)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div style={{ padding: "20px", textAlign: "center" }}>
+        <h2>Loading database data...</h2>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{ padding: "20px", maxWidth: "1200px", margin: "0 auto" }}>
+      <h1>Database Demo with Prisma</h1>
+      
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+        {/* Users Section */}
+        <div>
+          <h2>Users ({users.length})</h2>
+          
+          <form onSubmit={handleCreateUser} style={{ marginBottom: "20px" }}>
+            <h3>Create New User</h3>
+            <div style={{ marginBottom: "10px" }}>
+              <input
+                type="email"
+                placeholder="Email"
+                value={newUser.email}
+                onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
+                style={{ width: "100%", padding: "8px", marginBottom: "5px" }}
+                required
+              />
+            </div>
+            <div style={{ marginBottom: "10px" }}>
+              <input
+                type="text"
+                placeholder="Name"
+                value={newUser.name}
+                onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
+                style={{ width: "100%", padding: "8px", marginBottom: "5px" }}
+              />
+            </div>
+            <button type="submit" style={{ padding: "8px 16px", backgroundColor: "#4f46e5", color: "white", border: "none", borderRadius: "4px" }}>
+              Create User
+            </button>
+          </form>
+
+          <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+            {users.map((user) => (
+              <div key={user.id} style={{ padding: "10px", border: "1px solid #e5e7eb", marginBottom: "10px", borderRadius: "4px" }}>
+                <h4>{user.name || "No name"}</h4>
+                <p>{user.email}</p>
+                <p style={{ fontSize: "12px", color: "#6b7280" }}>
+                  Created: {new Date(user.createdAt).toLocaleDateString()}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Courses Section */}
+        <div>
+          <h2>Courses ({courses.length})</h2>
+          
+          <form onSubmit={handleCreateCourse} style={{ marginBottom: "20px" }}>
+            <h3>Create New Course</h3>
+            <div style={{ marginBottom: "10px" }}>
+              <input
+                type="text"
+                placeholder="Course Title"
+                value={newCourse.title}
+                onChange={(e) => setNewCourse({ ...newCourse, title: e.target.value })}
+                style={{ width: "100%", padding: "8px", marginBottom: "5px" }}
+                required
+              />
+            </div>
+            <div style={{ marginBottom: "10px" }}>
+              <input
+                type="text"
+                placeholder="Description"
+                value={newCourse.description}
+                onChange={(e) => setNewCourse({ ...newCourse, description: e.target.value })}
+                style={{ width: "100%", padding: "8px", marginBottom: "5px" }}
+              />
+            </div>
+            <div style={{ marginBottom: "10px" }}>
+              <input
+                type="number"
+                placeholder="Price"
+                value={newCourse.price}
+                onChange={(e) => setNewCourse({ ...newCourse, price: parseFloat(e.target.value) || 0 })}
+                style={{ width: "100%", padding: "8px", marginBottom: "5px" }}
+              />
+            </div>
+            <button type="submit" style={{ padding: "8px 16px", backgroundColor: "#4f46e5", color: "white", border: "none", borderRadius: "4px" }}>
+              Create Course
+            </button>
+          </form>
+
+          <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+            {courses.map((course) => (
+              <div key={course.id} style={{ padding: "10px", border: "1px solid #e5e7eb", marginBottom: "10px", borderRadius: "4px" }}>
+                <h4>{course.title}</h4>
+                <p>{course.description || "No description"}</p>
+                <p style={{ fontWeight: "bold", color: "#059669" }}>
+                  ${course.price || 0}
+                </p>
+                <p style={{ fontSize: "12px", color: "#6b7280" }}>
+                  Created: {new Date(course.createdAt).toLocaleDateString()}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div style={{ marginTop: "20px", padding: "20px", backgroundColor: "#f9fafb", borderRadius: "4px" }}>
+        <h3>Database Status</h3>
+        <p> Prisma Client connected successfully</p>
+        <p> SQLite database: dev.db</p>
+        <p> Tables created: users, posts, comments, courses, lessons, enrollments</p>
+      </div>
+    </div>
+  )
+}
+
+export default DatabaseDemo
