@@ -1,11 +1,43 @@
 import React from 'react'
-
+import { useLocation } from 'react-router-dom'
+const isEcomPage = location.pathname === "/products/ecom";
+const isAgencyPage = location.pathname === "/products/agency";
+const isAmazonPage = location.pathname === "/products/amazon";
+const isSixfigurePage = location.pathname === "/products/sixfigure";
+const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
+const isGhostPage = location.pathname === "/products/ghost";
+const isMarketPage = location.pathname === "/products/market";
+const isCopyPage = location.pathname === "/products/copy";
+const isMoneyPage = location.pathname === "/products/money";
+const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
 const Contentlibrary = () => {
   return (
     <section
     id="content-library"
-    style={{ backgroundColor: "#1a2603" }}
     className="section"
+    style={{
+      backgroundColor: isEcomPage
+        ? "#1a2603" // when on /products/ecom
+        : isAgencyPage
+        ? "#000d1e" // when on /products/agency
+        : isAmazonPage
+        ? "#251000" // when on /products/amazon
+        : isSixfigurePage
+        ? "#002b29" // when on /products/sixfigure
+        : isEntrepreneursPage
+        ? "#2b1f00" // when on /products/entrepreneurs
+        : isGhostPage
+        ? "#2b0001" // when on /products/ghost
+        : isMarketPage
+        ? "#001706" // when on /products/market
+        : isCopyPage
+        ? "#001e09" // when on /products/copy
+        : isMoneyPage
+        ? "#20002b" // when on /products/money
+        : isClickaffiliatePage
+        ? "#2b0020" // when on /products/1-click-affiliate
+        : "#251000", // default fallback
+    }}
   >
     <div className="container box">
       <div className="wrap-v-small margin-large">

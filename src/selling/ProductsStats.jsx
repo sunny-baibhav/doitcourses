@@ -1,9 +1,43 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 
+const isEcomPage = location.pathname === "/products/ecom";
+const isAgencyPage = location.pathname === "/products/agency";
+const isAmazonPage = location.pathname === "/products/amazon";
+const isSixfigurePage = location.pathname === "/products/sixfigure";
+const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
+const isGhostPage = location.pathname === "/products/ghost";
+const isMarketPage = location.pathname === "/products/market";
+const isCopyPage = location.pathname === "/products/copy";
+const isMoneyPage = location.pathname === "/products/money";
+const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
 const ProductsStats = () => {
   return (
-    <section className="section products" style={{ backgroundColor: "#1a2603" }} >
+    <section className="section products" style={{
+      backgroundColor: isEcomPage
+        ? "#1a2603" // when on /products/ecom
+        : isAgencyPage
+        ? "#000d1e" // when on /products/agency
+        : isAmazonPage
+        ? "#251000" // when on /products/amazon
+        : isSixfigurePage
+        ? "#002b29" // when on /products/sixfigure
+        : isEntrepreneursPage
+        ? "#2b1f00" // when on /products/entrepreneurs
+        : isGhostPage
+        ? "#2b0001" // when on /products/ghost
+        : isMarketPage
+        ? "#001706" // when on /products/market
+        : isCopyPage
+        ? "#001e09" // when on /products/copy
+        : isMoneyPage
+        ? "#20002b" // when on /products/money
+        : isClickaffiliatePage
+        ? "#2b0020" // when on /products/1-click-affiliate
+        : "#251000", // default fallback
+    }} >
   <div className="w-layout-blockcontainer container w-container">
     <div className="wrap-v-regular centre">
       <a
@@ -14,6 +48,7 @@ const ProductsStats = () => {
         href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
         className="header-badge products w-inline-block"
         rel="noopener"
+        
       >
         <div className="wrap-h-x-small">
           <p className="max-width-badge products">Product Stats</p>

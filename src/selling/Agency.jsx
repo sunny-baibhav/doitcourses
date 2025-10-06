@@ -1,19 +1,20 @@
 import React from 'react'
-import Footer from '../pages/Footer'
 import Navbar from '../pages/Navbar'
+import Footer from '../pages/Footer'
+import DropCoursing from '../pages/DropCoursing'
 import ProductsStats from './ProductsStats'
 import ProfitCalculator from './ProfitCalculator'
 import Contentlibrary from './Contentlibrary'
 import AllAccess from './AllAccess'
 import Faq from '../pages/Faq'
-import DropCoursing from '../pages/DropCoursing'
 
-const Ecom = () => {
+const Agency = () => {
   return (
     <>
     <Navbar/>
+
     <section
-    style={{ backgroundColor: "#1a2603" }}
+    style={{ backgroundColor: "#000d1e" }}
     className="section products hero"
   >
     <div className="container">
@@ -28,23 +29,20 @@ const Ecom = () => {
           rel="noopener"
         >
           <div className="wrap-h-x-small">
-            <p className="max-width-badge products">Ecom Prodigy</p>
+            <p className="max-width-badge products">Agency Blueprint</p>
           </div>
         </a>
-        <h1 style={{ color: "#a4d54a" }} className="h1-max-width products">
+        <h1 style={{ color: "#708aff" }} className="h1-max-width products">
           <span className="white">White-label and resell this</span>{" "}
           <span className="products-highlight-premium">premium </span>
-          <span
-            data-product-summary="dropshipping course"
-            className="products-highlight"
-          >
-            dropshipping course
+          <span data-product-summary="SMMA course" className="products-highlight">
+            SMMA course
           </span>
         </h1>
         <p className="paragraph-large hero products">
           Get immediate access to all the{" "}
-          <span data-product-name="Ecom Prodigy" className="products-name">
-            Ecom Prodigy
+          <span data-product-name="Agency Blueprint" className="products-name">
+            Agency Blueprint
           </span>{" "}
           content, plug-and-play landing page, content library and more.
         </p>
@@ -54,9 +52,9 @@ const Ecom = () => {
             data-wf-ao-click-engagement-tracking="true"
             data-wf-element-id="1c477564-f4b8-224a-047d-42add912b5b7"
             style={{
-              backgroundColor: "#a4d54a",
-              borderColor: "#1a2603",
-              color: "#1a2603"
+              backgroundColor: "#708aff",
+              borderColor: "#000d1e",
+              color: "#000d1e"
             }}
             href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
             data-wf-event-ids={157035618}
@@ -86,8 +84,11 @@ const Ecom = () => {
             </div>
             <div>
               Duplicate{" "}
-              <span data-product-name="Ecom Prodigy" className="products-name">
-                Ecom Prodigy
+              <span
+                data-product-name="Agency Blueprint"
+                className="products-name"
+              >
+                Agency Blueprint
               </span>
               <strong> </strong>
             </div>
@@ -110,23 +111,23 @@ const Ecom = () => {
         <div className="wrap-h-regular-2 mobile">
           <div className="featured-course white">Course Preview</div>
           <img
-            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png"
+            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo.png"
             loading="lazy"
             alt=""
             height={40}
             sizes="100vw"
-            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png 1422w"
+            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo.png 1632w"
             className="h3-image course"
           />
         </div>
         <div className="wrap-h-small course-stats">
-          <p className="align-centre">40</p>
+          <p className="align-centre">12</p>
           <p>Lessons</p>
           <div className="dot white" />
-          <p className="align-centre">6</p>
+          <p className="align-centre">5</p>
           <p>Modules</p>
           <div className="dot white" />
-          <p className="align-centre">6.1</p>
+          <p className="align-centre">6.5</p>
           <p>Hours of Content</p>
         </div>
       </div>
@@ -141,13 +142,11 @@ const Ecom = () => {
           rel="noopener"
         >
           <img
-            src="/1.png"
-            // src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png"
+            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057.png"
             loading="lazy"
             alt=""
             sizes="100vw"
-            srcSet="/1.png"
-            // srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png 2136w"
+            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057.png 2136w"
             className="course-cover"
           />
           <div className="play-button-wrap">
@@ -192,8 +191,11 @@ const Ecom = () => {
             </a>
             <div>
               <strong>Module 1, Episode 1:</strong> Intro to{" "}
-              <span data-product-name="Ecom Prodigy" className="products-name">
-                Ecom Prodigy
+              <span
+                data-product-name="Agency Blueprint"
+                className="products-name"
+              >
+                Agency Blueprint
               </span>{" "}
             </div>
           </div>
@@ -296,9 +298,9 @@ const Ecom = () => {
             data-wf-ao-click-engagement-tracking="true"
             data-wf-element-id="c96c1b3d-b8f0-842e-4de5-664436c7503b"
             style={{
-              backgroundColor: "#a4d54a",
-              borderColor: "#1a2603",
-              color: "#1a2603"
+              backgroundColor: "#708aff",
+              borderColor: "#000d1e",
+              color: "#000d1e"
             }}
             href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
             data-wf-event-ids={157035618}
@@ -338,12 +340,12 @@ const Ecom = () => {
         <div className="wrap-h-regular-2 mobile">
           <div className="featured-course white">Community Preview</div>
           <img
-            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png"
+            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo.png"
             loading="lazy"
             alt=""
             height={40}
             sizes="100vw"
-            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png 1422w"
+            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7b34eeba9f6eeaa55df_agencylogo.png 1632w"
             className="h3-image course"
           />
         </div>
@@ -359,12 +361,11 @@ const Ecom = () => {
           rel="noopener"
         >
           <img
-            src="/"
+            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057.png"
             loading="lazy"
             alt=""
             sizes="100vw"
-            srcSet="/1.png"
-            // srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png 2136w"
+            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6836a7ba7d76192f3f3f80c4_Frame%2057.png 2136w"
             className="course-cover"
           />
         </a>
@@ -378,9 +379,9 @@ const Ecom = () => {
             data-wf-ao-click-engagement-tracking="true"
             data-wf-element-id="fa468542-c180-d29c-02fb-5b3f0d5dbd74"
             style={{
-              backgroundColor: "#a4d54a",
-              borderColor: "#1a2603",
-              color: "#1a2603"
+              backgroundColor: "#708aff",
+              borderColor: "#000d1e",
+              color: "#000d1e"
             }}
             href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
             data-wf-event-ids={157035618}
@@ -418,12 +419,13 @@ const Ecom = () => {
   </section>
   <ProductsStats/>
 <ProfitCalculator/>
-<Contentlibrary/>
-<AllAccess/>
-<Faq/>
-<DropCoursing/>
-  <Footer/></>
+  <Contentlibrary/>
+  <AllAccess/>
+  <Faq/>
+  <DropCoursing/>
+  <Footer/>
+  </>
   )
 }
 
-export default Ecom
+export default Agency

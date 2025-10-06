@@ -1,11 +1,21 @@
 import React from 'react'
 import { useLocation } from "react-router-dom";
-
+const isEcomPage = location.pathname === "/products/ecom";
+const isAgencyPage = location.pathname === "/products/agency";
+const isAmazonPage = location.pathname === "/products/amazon";
+const isSixfigurePage = location.pathname === "/products/sixfigure";
+const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
+const isGhostPage = location.pathname === "/products/ghost";
+const isMarketPage = location.pathname === "/products/market";
+const isCopyPage = location.pathname === "/products/copy";
+const isMoneyPage = location.pathname === "/products/money";
+const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
+const products = location.pathname === "/products";
 const DropCoursing = () => {
   const location = useLocation();
   const isEcomPage = location.pathname === "/products/ecom";
   return (
-   <section className="section footer no-top bottom" style={{ backgroundColor: isEcomPage ? "#1a2603" : "#ffffff" }}>
+   <section className="section footer no-top bottom" style={{ backgroundColor: isEcomPage ? "#1a2603" : isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : products ? "#fff" : "#000d1e" }}>
   <div className="container-footer">
     <div className="outline-div">
       <div className="cta-block-d align-centre">
