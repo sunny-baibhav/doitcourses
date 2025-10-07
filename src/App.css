@@ -1,0 +1,218 @@
+/* Global layout helpers */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container,
+.container-footer,
+.w-layout-blockcontainer,
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Images */
+img,
+.image-cover,
+.h3-image,
+.nav-image,
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Specific image sizing for different screen sizes */
+.h3-image {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.image-cover {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Large feature images */
+.content-card-b .image-cover {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Hero section images */
+._3d-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive image sizing */
+@media (max-width: 1024px) {
+  .h3-image {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .content-card-b .image-cover {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h3-image {
+    max-width: 70%;
+    height: auto;
+  }
+  
+  .content-card-b .image-cover {
+    max-height: 200px;
+  }
+  
+  ._3d-image {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .h3-image {
+    max-width: 60%;
+    height: auto;
+  }
+  
+  .content-card-b .image-cover {
+    max-height: 150px;
+  }
+}
+
+/* Logo carousel sizing (Save $1100+ section) */
+.logo-carousel-horizontal { overflow: hidden; }
+.logo-carousel-content { align-items: center; }
+.logo-carousel-content img.icon {
+  height: 50px !important;
+  width: auto !important;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .logo-carousel-content img.icon { height: 40px !important; }
+}
+
+@media (max-width: 480px) {
+  .logo-carousel-content img.icon { height: 34px !important; }
+}
+
+/* Navbar base */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grids used across pages */
+._2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.grid.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.grid.w-dyn-items,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Utility */
+.mobile-hide {
+  display: inline-block;
+}
+
+/* Responsive rules */
+@media (max-width: 1024px) {
+  .grid.menu { grid-template-columns: repeat(2, 1fr); }
+  .grid.w-dyn-items,
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  ._2-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 120px !important;
+  }
+
+  .nav-menu {
+    width: 100%;
+    order: 3;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-button-group {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobile-hide { display: none !important; }
+
+  .nav-list.w-dropdown-list {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px !important;
+  }
+
+  ._2-grid { grid-template-columns: 1fr; }
+  .grid.menu { grid-template-columns: 1fr; }
+  .grid.w-dyn-items,
+  .grid { grid-template-columns: 1fr; }
+
+  .wrap-v-regular,
+  .wrap-v-large,
+  .wrap-v-small { width: 100%; }
+
+  .section { padding-left: 12px; padding-right: 12px; }
+}
+
+@media (max-width: 480px) {
+  .logo { width: 100px !important; }
+  .nav-menu { gap: 8px; }
+  .button-primary, .button-secondary {
+    padding: 8px 14px !important;
+    font-size: 14px !important;
+  }
+}
+
+

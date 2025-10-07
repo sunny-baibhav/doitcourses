@@ -10,7 +10,7 @@ const Main = () => {
         data-wf-native-id-path="07c4a22e-fe6a-0beb-e143-b7a11cbffe1b"
         data-wf-ao-click-engagement-tracking="true"
         data-wf-element-id="07c4a22e-fe6a-0beb-e143-b7a11cbffe1b"
-        href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+        href="/"
         className="header-badge utm w-inline-block"
         rel="noopener"
       >
@@ -25,7 +25,7 @@ const Main = () => {
         data-wf-native-id-path="388de476-ca63-d063-6d35-da1d9c195295"
         data-wf-ao-click-engagement-tracking="true"
         data-wf-element-id="388de476-ca63-d063-6d35-da1d9c195295"
-        href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+        href="/"
         className="header-badge utm w-inline-block"
         rel="noopener"
       >
@@ -43,13 +43,13 @@ const Main = () => {
         target="_blank"
         className="whop w-inline-block"
       >
-        <div className="whop-text">As featured on</div>
+        <div className="whop-text">Made By Doitcourse</div>
         <img
           src="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange.png"
           loading="lazy"
           sizes="(max-width: 3051px) 100vw, 3051px"
           srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange-p-500.png 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange-p-800.png 800w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange-p-1080.png 1080w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange-p-1600.png 1600w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange-p-2000.png 2000w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb5ff84b161594e9c42e21_whop_logo_wordmark_orange.png 3051w"
-          alt=""
+          alt="Whop Logo"
           className="whop-logo"
         />
       </a>
@@ -68,7 +68,7 @@ const Main = () => {
           data-wf-ao-click-engagement-tracking="true"
           data-wf-element-id="a27c0ef6-1a6a-2573-33ff-d56af3c842ce"
           data-wf-component-context="%5B%7B%22componentId%22%3A%22a27c0ef6-1a6a-2573-33ff-d56af3c842ce%22%2C%22instanceId%22%3A%22a27c0ef6-1a6a-2573-33ff-d56af3c842d4%22%7D%5D"
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          href="/"
           data-wf-event-ids={157035618}
           className="button-primary w-inline-block"
           rel="noopener"
@@ -163,7 +163,7 @@ const Main = () => {
                   data-wf-native-id-path="ccea8598-c05b-5bce-cf23-cd18e0686f7a"
                   data-wf-ao-click-engagement-tracking="true"
                   data-wf-element-id="ccea8598-c05b-5bce-cf23-cd18e0686f7a"
-                  href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                  href="/"
                   data-wf-event-ids={157035618}
                   className="card-round w-inline-block"
                   rel="noopener"
@@ -214,7 +214,7 @@ const Main = () => {
                   data-wf-native-id-path="292ab335-e0ec-1aeb-ac7b-2c24bbd2fc66"
                   data-wf-ao-click-engagement-tracking="true"
                   data-wf-element-id="292ab335-e0ec-1aeb-ac7b-2c24bbd2fc66"
-                  href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                  href="/"
                   className="card-round w-inline-block"
                   rel="noopener"
                   style={{
@@ -264,7 +264,7 @@ const Main = () => {
                   data-wf-native-id-path="c06a28c6-312f-9a8b-27df-c31d546497f9"
                   data-wf-ao-click-engagement-tracking="true"
                   data-wf-element-id="c06a28c6-312f-9a8b-27df-c31d546497f9"
-                  href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                  href="/"
                   className="card-round w-inline-block"
                   rel="noopener"
                   style={{
@@ -314,7 +314,7 @@ const Main = () => {
                   data-wf-native-id-path="ee659e95-6655-26a4-bdea-111bc6b907c2"
                   data-wf-ao-click-engagement-tracking="true"
                   data-wf-element-id="ee659e95-6655-26a4-bdea-111bc6b907c2"
-                  href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                  href="/"
                   className="card-round w-inline-block"
                   rel="noopener"
                   style={{
@@ -400,7 +400,7 @@ const Main = () => {
         </a>
       </div>
     </div>
-    <div className="tab-buttons-wrapper">
+    {/* <div className="tab-buttons-wrapper">
       <div className="tabs-buttons">
         <a
           data-tab-target="Tab 1"
@@ -514,7 +514,7 @@ const Main = () => {
         />
         <p>4.8 out of 5</p>
       </a>
-    </div>
+    </div> */}
   </div>
 </section>
 

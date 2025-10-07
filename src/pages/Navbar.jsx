@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
@@ -8,6 +8,36 @@ const Navbar = () => {
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const featuresRef = useRef(null);
+  const coursesRef = useRef(null);
+
+  useEffect(() => {
+    const mql = window.matchMedia("(max-width: 768px)");
+    const listener = (e) => setIsMobile(e.matches);
+    setIsMobile(mql.matches);
+    mql.addEventListener ? mql.addEventListener("change", listener) : mql.addListener(listener);
+    return () => {
+      mql.removeEventListener ? mql.removeEventListener("change", listener) : mql.removeListener(listener);
+    };
+  }, []);
+
+  // Close dropdowns on outside tap (mobile)
+  useEffect(() => {
+    if (!isMobile) return;
+    const onDocClick = (e) => {
+      const f = featuresRef.current;
+      const c = coursesRef.current;
+      const clickedInsideFeatures = f && f.contains(e.target);
+      const clickedInsideCourses = c && c.contains(e.target);
+      if (!clickedInsideFeatures && !clickedInsideCourses) {
+        setFeaturesOpen(false);
+        setCoursesOpen(false);
+      }
+    };
+    document.addEventListener("click", onDocClick, true);
+    return () => document.removeEventListener("click", onDocClick, true);
+  }, [isMobile]);
 
   const popularFeatures = [
     {
@@ -88,7 +118,7 @@ const Navbar = () => {
   ];
 
   return (
-   <div className="navbar">
+    <div className="navbar">
       {/* Top Banner */}
       {/* <div className="banner" style={{ backgroundColor: "#0a421e" }}>
     <a
@@ -117,86 +147,114 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <div
-    className="nav-bar w-nav"
-  style={{
-  willChange: "background",
+        className="nav-bar w-nav"
+        style={{
+          willChange: "background",
           backgroundColor: isEcomPage ? "#1a2603" : "#ffffff",
-}}
-  >
-    <div className="nav-container">
+        }}
+      >
+        <div className="nav-container">
           {/* Logo */}
-          <a href="/" className="nav-logo-link w-inline-block w--current">
-            <img
-              // src={
-              //   isEcomPage
-              //     ? "https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png"
-              //     : "https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68cb83e643829211fbb71732_logo.png"
-              // }
-              src="/ecomlogo.png"
-          loading="lazy"
-              alt="logo"
-          className="logo"
-              style={{
-                width: "150px",   // set your desired width
-                height: "auto",   // maintains aspect ratio
-                objectFit: "contain", // ensures it fits nicely
-              }}
-        />
-      </a>
+          <a href="/" className="nav-logo-link w-inline-block w--current" style={{ textDecoration: "none", borderBottom: "none" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              {/* Icon Box */}
+              <div style={{
+                width: "66px",
+                height: "55px",
+                backgroundColor: "#f8f9fa",
+                border: "1px solid #e9ecef",
+                borderRadius: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+              }}>
+                <img
+                  src="/home.svg"
+                  loading="lazy"
+                  alt="Doitcourse Logo"
+                  className="logo"
+                  style={{
+                    width: "45px",
+                    height: "45px",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+               <h3
+                 style={{
+                   margin: 0,
+                   fontSize: "24px",
+                   fontWeight: 900,
+                   color: "#333",
+                   textDecoration: "none !important",
+                   fontFamily: "Arial, sans-serif",
+                   borderBottom: "none !important",
+                   outline: "none",
+                 }}
+               >
+                 Doitcourse
+               </h3>
+
+            </div>
+          </a>
 
           {/* Nav Menu */}
-      <nav role="navigation" className="nav-menu w-nav-menu">
+          <nav role="navigation" className="nav-menu w-nav-menu">
             {/* Features Dropdown */}
-        <div
-          className="nav-dropdown w-dropdown"
-              onMouseEnter={() => setFeaturesOpen(true)}
-              onMouseLeave={() => setFeaturesOpen(false)}
+            <div
+              className="nav-dropdown w-dropdown"
+              ref={featuresRef}
+              onMouseEnter={() => { if (!isMobile) { setFeaturesOpen(true); setCoursesOpen(false); } }}
+              onMouseLeave={() => { if (!isMobile) setFeaturesOpen(false); }}
+              onClick={() => { if (isMobile) { setFeaturesOpen((o) => !o); if (!featuresOpen) setCoursesOpen(false); } }}
               style={{
                 position: "relative",
                 backgroundColor: isEcomPage ? "#1a2603" : "#ffffff",
+                width: isMobile ? "100%" : undefined,
               }}
             >
               <div className="nav-toggle w-dropdown-toggle">
                 <div style={{ color: isEcomPage ? "#ffffff" : "#000000" }}>
                   Features
                 </div>
-            <div
-              className="icon-small w-embed"
+                <div
+                  className="icon-small w-embed"
                   style={{ color: isEcomPage ? "#ffffff" : "#000000" }}
                 >
                   <ChevronDown
                     size={16}
-              style={{
+                    style={{
                       transform: featuresOpen
                         ? "rotate(180deg)"
                         : "rotate(0deg)",
                       transition: "transform 0.3s ease",
                     }}
                   />
-            </div>
-          </div>
+                </div>
+              </div>
 
               {featuresOpen && (
-          <nav
-            className="nav-list w-dropdown-list"
+                <nav
+                  className="nav-list w-dropdown-list"
                   style={{
                     opacity: 1,
                     display: "block",
-                    position: "absolute",
-                    top: "100%",
-                    left: "0",
-                    width: "600px",
-                    maxWidth: "90vw",
+                    position: isMobile ? "static" : "absolute",
+                    top: isMobile ? undefined : "100%",
+                    left: isMobile ? undefined : "0",
+                    width: isMobile ? "100%" : "600px",
+                    maxWidth: isMobile ? "100%" : "90vw",
                     backgroundColor: "white",
                     borderRadius: "12px",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
                     border: "1px solid #E5E7EB",
                     zIndex: 1000,
-                    padding: "24px",
+                    padding: isMobile ? "16px" : "24px",
                   }}
-          >
-            <div className="nav-dropdown-base-c">
-              <div className="nav-bottom">
+                >
+                  <div className="nav-dropdown-base-c">
+                    <div className="nav-bottom">
                       <div
                         className="paragraph-small black"
                         style={{
@@ -206,13 +264,13 @@ const Navbar = () => {
                         }}
                       >
                         Popular Features
-                    </div>
+                      </div>
 
                       <div
                         className="_2-grid"
                         style={{
                           display: "grid",
-                          gridTemplateColumns: "repeat(2, 1fr)",
+                          gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
                           gap: "12px",
                         }}
                       >
@@ -220,7 +278,7 @@ const Navbar = () => {
                           <a
                             key={index}
                             href={feature.link}
-                    className="wrap-v-regular menu-features w-inline-block"
+                            className="wrap-v-regular menu-features w-inline-block"
                             style={{
                               display: "flex",
                               alignItems: "flex-start",
@@ -232,6 +290,7 @@ const Navbar = () => {
                               color: "inherit",
                               backgroundColor: "white",
                             }}
+                            onClick={() => { if (isMobile) setFeaturesOpen(false); }}
                           >
                             <div
                               style={{
@@ -248,7 +307,7 @@ const Navbar = () => {
                               }}
                             >
                               {feature.icon}
-                    </div>
+                            </div>
                             <div style={{ flex: 1, minWidth: 0 }}>
                               <div
                                 style={{
@@ -259,7 +318,7 @@ const Navbar = () => {
                                 }}
                               >
                                 {feature.title}
-                    </div>
+                              </div>
                               <div
                                 style={{
                                   fontSize: "11px",
@@ -268,68 +327,71 @@ const Navbar = () => {
                                 }}
                               >
                                 {feature.desc}
-                        </div>
-                      </div>
-                    </a>
+                              </div>
+                            </div>
+                          </a>
                         ))}
-                </div>
-              </div>
-            </div>
-          </nav>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
               )}
-        </div>
+            </div>
 
             {/* Courses Dropdown */}
-        <div
-          className="nav-dropdown w-dropdown"
-              onMouseEnter={() => setCoursesOpen(true)}
-              onMouseLeave={() => setCoursesOpen(false)}
+            <div
+              className="nav-dropdown w-dropdown"
+              ref={coursesRef}
+              onMouseEnter={() => { if (!isMobile) { setCoursesOpen(true); setFeaturesOpen(false); } }}
+              onMouseLeave={() => { if (!isMobile) setCoursesOpen(false); }}
+              onClick={() => { if (isMobile) { setCoursesOpen((o) => !o); if (!coursesOpen) setFeaturesOpen(false); } }}
               style={{
                 position: "relative",
                 backgroundColor: isEcomPage ? "#1a2603" : "#ffffff",
+                width: isMobile ? "100%" : undefined,
               }}
             >
               <div className="nav-toggle w-dropdown-toggle">
                 <div style={{ color: isEcomPage ? "#ffffff" : "#000000" }}>
                   Courses
                 </div>
-            <div
-              className="icon-small w-embed"
+                <div
+                  className="icon-small w-embed"
                   style={{ color: isEcomPage ? "#ffffff" : "#000000" }}
                 >
                   <ChevronDown
                     size={16}
-              style={{
+                    style={{
                       transform: coursesOpen
                         ? "rotate(180deg)"
                         : "rotate(0deg)",
                       transition: "transform 0.3s ease",
                     }}
                   />
-            </div>
-          </div>
+                </div>
+              </div>
 
               {coursesOpen && (
-          <nav
-            className="nav-list w-dropdown-list"
+                <nav
+                  className="nav-list w-dropdown-list"
                   style={{
                     opacity: 1,
                     display: "block",
-                    position: "absolute",
-                    top: "100%",
-                    left: "0",
-                    width: "700px",
-                    maxWidth: "90vw",
+                    position: isMobile ? "static" : "absolute",
+                    top: isMobile ? undefined : "100%",
+                    left: isMobile ? undefined : "0",
+                    width: isMobile ? "100%" : "700px",
+                    maxWidth: isMobile ? "100%" : "90vw",
                     backgroundColor: "white",
                     borderRadius: "12px",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
                     border: "1px solid #E5E7EB",
                     zIndex: 1000,
-                    padding: "24px",
+                    padding: isMobile ? "16px" : "24px",
                   }}
-          >
-            <div className="nav-dropdown-base-c">
-              <div className="nav-bottom">
+                >
+                  <div className="nav-dropdown-base-c">
+                    <div className="nav-bottom">
                       <div
                         className="paragraph-small black"
                         style={{
@@ -339,13 +401,13 @@ const Navbar = () => {
                         }}
                       >
                         Our Premium Courses & Communities
-                        </div>
+                      </div>
 
                       <div
                         className="grid menu"
                         style={{
                           display: "grid",
-                          gridTemplateColumns: "repeat(3, 1fr)",
+                          gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
                           gap: "12px",
                           marginBottom: "20px",
                         }}
@@ -353,8 +415,8 @@ const Navbar = () => {
                         {courses.map((course, index) => (
                           <a
                             key={index}
-                    href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-                    className="nav-feature-link-l w-inline-block"
+                            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                            className="nav-feature-link-l w-inline-block"
                             style={{
                               display: "flex",
                               flexDirection: "column",
@@ -366,11 +428,12 @@ const Navbar = () => {
                               color: "inherit",
                               backgroundColor: "white",
                             }}
-                  >
-                    <img
+                            onClick={() => { if (isMobile) setCoursesOpen(false); }}
+                          >
+                            <img
                               src={course.img}
                               alt={course.name}
-                      className="nav-image"
+                              className="nav-image"
                               style={{
                                 width: "100%",
                                 height: "80px",
@@ -381,7 +444,7 @@ const Navbar = () => {
                               className="nav-link-icon"
                               style={{ padding: "10px" }}
                             >
-                        <div>
+                              <div>
                                 <div
                                   className="nav-link-text"
                                   style={{
@@ -392,8 +455,8 @@ const Navbar = () => {
                                   }}
                                 >
                                   {course.name}
-                    </div>
-                    <div
+                                </div>
+                                <div
                                   className="paragraph-small"
                                   style={{
                                     fontSize: "10px",
@@ -402,16 +465,16 @@ const Navbar = () => {
                                   }}
                                 >
                                   {course.desc}
-                          </div>
-                        </div>
-                      </div>
+                                </div>
+                              </div>
+                            </div>
                           </a>
                         ))}
-                    </div>
+                      </div>
 
                       <a
-                  href="/products"
-                  className="button-secondary nav _100 w-inline-block"
+                        href="/products"
+                        className="button-secondary nav _100 w-inline-block"
                         style={{
                           display: "inline-block",
                           padding: "10px 20px",
@@ -431,31 +494,32 @@ const Navbar = () => {
                           e.currentTarget.style.backgroundColor = "transparent";
                           e.currentTarget.style.color = "#235ae9";
                         }}
-                >
-                  <div>Explore all courses</div>
-                </a>
-              </div>
-            </div>
-          </nav>
+                        onClick={() => { if (isMobile) setCoursesOpen(false); }}
+                      >
+                        <div>Explore all courses</div>
+                      </a>
+                    </div>
+                  </div>
+                </nav>
               )}
-        </div>
+            </div>
 
             {/* Pricing */}
-        <a
-          href="https://www.dropcourse.com/#pricing"
-          className="nav-link w-nav-link"
+            <a
+              href="/"
+              className="nav-link w-nav-link"
               style={{ color: isEcomPage ? "#ffffff" : "#000000" }}
-        >
-          Pricing
-        </a>
+            >
+              Pricing
+            </a>
           </nav>
 
           {/* Right Buttons */}
           <div className="nav-button-group">
             {isEcomPage ? (
-        <a
+              <a
                 data-wf-native-id-path="6f244790-4ba3-360c-6ed5-bcdb081af4f6"
-          data-wf-ao-click-engagement-tracking="true"
+                data-wf-ao-click-engagement-tracking="true"
                 data-wf-element-id="6f244790-4ba3-360c-6ed5-bcdb081af4f6"
                 style={{
                   backgroundColor: "#a4d54a",
@@ -468,11 +532,11 @@ const Navbar = () => {
                   display: "inline-block",
                   transition: "all 0.2s ease",
                 }}
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-          data-wf-event-ids={157035618}
+                href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                data-wf-event-ids={157035618}
                 className="button-primary products nav mobile-hide w-inline-block"
-          rel="noopener"
-        >
+                rel="noopener"
+              >
                 <div>
                   Resell now <span className="arrow">→</span>
                 </div>
@@ -480,8 +544,8 @@ const Navbar = () => {
             ) : (
               <>
                 <a
-                  href="https://app.dropcourse.com/"
-          className="button-secondary nav mobile-hide w-inline-block"
+                  href="/login"
+                  className="button-secondary nav mobile-hide w-inline-block"
                   style={{
                     padding: "10px 20px",
                     borderRadius: "6px",
@@ -490,13 +554,13 @@ const Navbar = () => {
                     display: "inline-block",
                     marginRight: "10px",
                   }}
-        >
-          <div>Log in</div>
-        </a>
-        <a
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-          className="button-primary nav mobile-hide w-inline-block"
-          rel="noopener"
+                >
+                  <div>Log in</div>
+                </a>
+                <a
+                  href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                  className="button-primary nav mobile-hide w-inline-block"
+                  rel="noopener"
                   style={{
                     padding: "10px 20px",
                     borderRadius: "6px",
@@ -504,16 +568,16 @@ const Navbar = () => {
                     textDecoration: "none",
                     display: "inline-block",
                   }}
-        >
-          <div>
-            Start now <span className="arrow">→</span>
-          </div>
-        </a>
+                >
+                  <div>
+                    Start now <span className="arrow">→</span>
+                  </div>
+                </a>
               </>
             )}
-        </div>
-
           </div>
+
+        </div>
       </div>
     </div>
   );

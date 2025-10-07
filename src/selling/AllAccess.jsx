@@ -12,29 +12,32 @@ const isMoneyPage = location.pathname === "/products/money";
 const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
 const AllAccess = () => {
   return (
-    <section style={{
-      backgroundColor: isEcomPage
-        ? "#1a2603" // when on /products/ecom
-        : isAgencyPage
-        ? "#000d1e" // when on /products/agency
-        : isAmazonPage
-        ? "#251000" // when on /products/amazon
-        : isSixfigurePage
-        ? "#002b29" // when on /products/sixfigure
-        : isEntrepreneursPage
-        ? "#2b1f00" // when on /products/entrepreneurs
-        : isGhostPage
-        ? "#2b0001" // when on /products/ghost
-        : isMarketPage
-        ? "#001706" // when on /products/market
-        : isCopyPage
-        ? "#001e09" // when on /products/copy
-        : isMoneyPage
-        ? "#20002b" // when on /products/money
-        : isClickaffiliatePage
-        ? "#2b0020" // when on /products/1-click-affiliate
-        : "#251000", // default fallback
-    }} className="section no-padding">
+    <section
+      style={{
+        backgroundColor: isEcomPage
+          ? "#1a2603" // when on /products/ecom
+          : isAgencyPage
+          ? "#000d1e" // when on /products/agency
+          : isAmazonPage
+          ? "#251000" // when on /products/amazon
+          : isSixfigurePage
+          ? "#002b29" // when on /products/sixfigure
+          : isEntrepreneursPage
+          ? "#2b1f00" // when on /products/entrepreneurs
+          : isGhostPage
+          ? "#2b0001" // when on /products/ghost
+          : isMarketPage
+          ? "#001706" // when on /products/market
+          : isCopyPage
+          ? "#001e09" // when on /products/copy
+          : isMoneyPage
+          ? "#20002b" // when on /products/money
+          : isClickaffiliatePage
+          ? "#2b0020" // when on /products/1-click-affiliate
+          : "", // ❌ no default fallback (transparent or inherited)
+      }}
+      className="section no-padding"
+    >
     <div className="container-footer">
       <div className="outline-div blur">
         <div className="cta-block-d right">

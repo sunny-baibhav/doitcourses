@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const Faq = () => {
   const location = useLocation();
+  const isHomePage = location.pathname === "/"; // added home page
   const isEcomPage = location.pathname === "/products/ecom";
   const isAgencyPage = location.pathname === "/products/agency";
   const isAmazonPage = location.pathname === "/products/amazon";
@@ -12,7 +13,9 @@ const Faq = () => {
   const isMarketPage = location.pathname === "/products/market";
   const isCopyPage = location.pathname === "/products/copy";
   const isMoneyPage = location.pathname === "/products/money";
-  const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
+  const isClickaffiliatePage =
+    location.pathname === "/products/1-click-affiliate";
+
   // Manage open/close state
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -46,7 +49,31 @@ const Faq = () => {
   return (
     <section
       className="section no-bottom"
-      style={{ backgroundColor: isEcomPage ? "#1a2603" : isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : "#000d1e" }}
+      style={{
+        backgroundColor: isHomePage
+          ? "#ffffff"
+          : isEcomPage
+          ? "#1a2603"
+          : isAgencyPage
+          ? "#000d1e"
+          : isAmazonPage
+          ? "#251000"
+          : isSixfigurePage
+          ? "#002b29"
+          : isEntrepreneursPage
+          ? "#2b1f00"
+          : isGhostPage
+          ? "#2b0001"
+          : isMarketPage
+          ? "#001706"
+          : isCopyPage
+          ? "#001e09"
+          : isMoneyPage
+          ? "#20002b"
+          : isClickaffiliatePage
+          ? "#2b0020"
+          : "#000d1e",
+      }}
     >
       <div className="w-layout-blockcontainer container w-container">
         <div className="wrap-v-regular align-center margin-s">
@@ -57,7 +84,29 @@ const Faq = () => {
           </a>
           <h2
             style={{
-              color: isEcomPage ? "#ffffff" : isAgencyPage ? "#ffffff" : isAmazonPage ? "#ffffff" : isSixfigurePage ? "#ffffff" : isEntrepreneursPage ? "#ffffff" : isGhostPage ? "#ffffff" : isMarketPage ? "#ffffff" : isCopyPage ? "#ffffff" : isMoneyPage ? "#ffffff" : isClickaffiliatePage ? "#ffffff" : "#000000",
+              color: isHomePage
+                ? "#000000"
+                : isEcomPage
+                ? "#ffffff"
+                : isAgencyPage
+                ? "#ffffff"
+                : isAmazonPage
+                ? "#ffffff"
+                : isSixfigurePage
+                ? "#ffffff"
+                : isEntrepreneursPage
+                ? "#ffffff"
+                : isGhostPage
+                ? "#ffffff"
+                : isMarketPage
+                ? "#ffffff"
+                : isCopyPage
+                ? "#ffffff"
+                : isMoneyPage
+                ? "#ffffff"
+                : isClickaffiliatePage
+                ? "#ffffff"
+                : "#000000",
             }}
           >
             Frequently asked questions
@@ -66,14 +115,60 @@ const Faq = () => {
 
         <div
           className="outline-div faqs"
-          style={{ backgroundColor: isEcomPage ? "#1a2603" : isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : "#000d1e" }}
+          style={{
+            backgroundColor: isHomePage
+              ? "#ffffff"
+              : isEcomPage
+              ? "#1a2603"
+              : isAgencyPage
+              ? "#000d1e"
+              : isAmazonPage
+              ? "#251000"
+              : isSixfigurePage
+              ? "#002b29"
+              : isEntrepreneursPage
+              ? "#2b1f00"
+              : isGhostPage
+              ? "#2b0001"
+              : isMarketPage
+              ? "#001706"
+              : isCopyPage
+              ? "#001e09"
+              : isMoneyPage
+              ? "#20002b"
+              : isClickaffiliatePage
+              ? "#2b0020"
+              : "#000d1e",
+          }}
         >
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="faq w-dropdown"
               style={{
-                backgroundColor: isEcomPage ? "#1a2603" :  isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : "#000d1e",
+                backgroundColor: isHomePage
+                  ? "#ffffff"
+                  : isEcomPage
+                  ? "#1a2603"
+                  : isAgencyPage
+                  ? "#000d1e"
+                  : isAmazonPage
+                  ? "#251000"
+                  : isSixfigurePage
+                  ? "#002b29"
+                  : isEntrepreneursPage
+                  ? "#2b1f00"
+                  : isGhostPage
+                  ? "#2b0001"
+                  : isMarketPage
+                  ? "#001706"
+                  : isCopyPage
+                  ? "#001e09"
+                  : isMoneyPage
+                  ? "#20002b"
+                  : isClickaffiliatePage
+                  ? "#2b0020"
+                  : "#000d1e",
                 borderBottom: "1px solid #ccc",
               }}
               onMouseEnter={() => setOpenIndex(index)}
@@ -93,7 +188,33 @@ const Faq = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <h5 style={{ color: isEcomPage ? "#ffffff" : isAgencyPage ? "#ffffff" : isAmazonPage ? "#ffffff" : isSixfigurePage ? "#ffffff" : isEntrepreneursPage ? "#ffffff" : isGhostPage ? "#ffffff" : isMarketPage ? "#ffffff" : isCopyPage ? "#ffffff" : isMoneyPage ? "#ffffff" : isClickaffiliatePage ? "#ffffff" : "#000000" }}>
+                <h5
+                  style={{
+                    color: isHomePage
+                      ? "#000000"
+                      : isEcomPage
+                      ? "#ffffff"
+                      : isAgencyPage
+                      ? "#ffffff"
+                      : isAmazonPage
+                      ? "#ffffff"
+                      : isSixfigurePage
+                      ? "#ffffff"
+                      : isEntrepreneursPage
+                      ? "#ffffff"
+                      : isGhostPage
+                      ? "#ffffff"
+                      : isMarketPage
+                      ? "#ffffff"
+                      : isCopyPage
+                      ? "#ffffff"
+                      : isMoneyPage
+                      ? "#ffffff"
+                      : isClickaffiliatePage
+                      ? "#ffffff"
+                      : "#000000",
+                  }}
+                >
                   {faq.question}
                 </h5>
                 <div className="faq-icon-2">
@@ -104,9 +225,14 @@ const Faq = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     style={{
-                      transform: openIndex === index ? "rotate(180deg)" : "rotate(0deg)",
+                      transform:
+                        openIndex === index ? "rotate(180deg)" : "rotate(0deg)",
                       transition: "transform 0.3s ease",
-                      color: isEcomPage ? "#ffffff" : isAgencyPage ? "#ffffff" : isAmazonPage ? "#251000" : isSixfigurePage ? "#251000" : isEntrepreneursPage ? "#251000" : isGhostPage ? "#251000" : isMarketPage ? "#251000" : isCopyPage ? "#251000" : isMoneyPage ? "#251000" : isClickaffiliatePage ? "#251000" : "#251000",
+                      color: isHomePage
+                        ? "#000000"
+                        : isEcomPage
+                        ? "#ffffff"
+                        : "#251000",
                     }}
                   >
                     <path
@@ -124,10 +250,18 @@ const Faq = () => {
                   maxHeight: openIndex === index ? "500px" : "0px",
                   overflow: "hidden",
                   transition: "max-height 0.4s ease",
-                  backgroundColor: isEcomPage ? "#263a0a" : "#f9f9f9",
+                  backgroundColor: isHomePage
+                    ? "#f9f9f9"
+                    : isEcomPage
+                    ? "#263a0a"
+                    : "#f9f9f9",
                   padding: openIndex === index ? "15px" : "0px 15px",
                   opacity: openIndex === index ? 1 : 0,
-                  color: isEcomPage ? "#ffffff" : isAgencyPage  ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#251000" : isEntrepreneursPage ? "#251000" : isGhostPage ? "#251000" : isMarketPage ? "#251000" : isCopyPage ? "#251000" : isMoneyPage ? "#251000" : isClickaffiliatePage ? "#251000" : "#000000",
+                  color: isHomePage
+                    ? "#000000"
+                    : isEcomPage
+                    ? "#ffffff"
+                    : "#251000",
                 }}
               >
                 <p>{faq.answer}</p>
