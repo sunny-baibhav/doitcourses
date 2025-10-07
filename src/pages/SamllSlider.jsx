@@ -33,16 +33,16 @@ const SamllSlider = () => {
     "#EB001B",
   ];
 
-  // Logos with direct public path
+  // Logos served from public/ root
   const logos = [
-    { src: "/logos/linkedin-svgrepo-com.svg", alt: "LinkedIn" },
-    { src: "/logos/mastercard-svgrepo-com.svg", alt: "Mastercard" },
-    { src: "/logos/microsoft-svgrepo-com.svg", alt: "Microsoft" },
-    { src: "/logos/notion-svgrepo-com.svg", alt: "Notion" },
-    { src: "/logos/slack-svgrepo-com.svg", alt: "Slack" },
-    { src: "/logos/stripe-svgrepo-com.svg", alt: "Stripe" },
-    { src: "/logos/linkedin-svgrepo-com.svg", alt: "LinkedIn" },
-    { src: "/logos/mastercard-svgrepo-com.svg", alt: "Mastercard" },
+    { src: "/linkedin-svgrepo-com.svg", alt: "LinkedIn" },
+    { src: "/mastercard-svgrepo-com.svg", alt: "Mastercard" },
+    { src: "/microsoft-svgrepo-com.svg", alt: "Microsoft" },
+    { src: "/notion-svgrepo-com.svg", alt: "Notion" },
+    { src: "/slack-svgrepo-com.svg", alt: "Slack" },
+    { src: "/stripe-svgrepo-com.svg", alt: "Stripe" },
+    { src: "/linkedin-svgrepo-com.svg", alt: "LinkedIn" },
+    { src: "/mastercard-svgrepo-com.svg", alt: "Mastercard" },
   ];
 
   return (
