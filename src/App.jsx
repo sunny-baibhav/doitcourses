@@ -22,6 +22,7 @@ import Clickaffiliate from "./selling/Clickaffiliate"
 import TermsCondition from "./cms/TermsCondition"
 import PrivacyPolicy from "./cms/PrivacyPolicy"
 import RefundPolicy from "./cms/RefundPolicy"
+import Webiste from "./website/Webiste"
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         <Route path="/terms-condition" element={<TermsCondition/>}/>
         <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
         <Route path="/refund-policy" element={<RefundPolicy/>}/>
+        <Route path="/website" element={<Webiste/>}/>
         {/* <Route path="/products/money-gram" element={<MoneyGram/>}/> */}
         {/* <Route path="/auth/callback" element={<Callback />} /> */}
 
