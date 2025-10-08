@@ -90,24 +90,24 @@ const Liveresults = () => {
       title: "SMMA Course",
       revenue: "$44,842.94",
       sales: "701",
-      link: "https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04",
+      link: "/",
     },
     {
       img: "https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68b6b60631eb5949732d8f4a_six%20figure%20closer%20box.avif",
       title: "High Ticket Closer Course",
       revenue: "$39,857.77",
       sales: "685",
-      link: "https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04",
+      link: "/",
     },
     {
-      img: "https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68b6b606407252a620486be1_market%20mastery%20box.avif",
+      img: "/3d.png",
       title: "Day Trading Course",
       revenue: "$49,786.10",
       sales: "672",
-      link: "https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04",
+      link: "/",
     },
     {
-      img: "",
+      img: "/3d.png",
       title: "Explore all courses →",
       revenue: "",
       sales: "",
@@ -161,7 +161,7 @@ const Liveresults = () => {
                 style={{ borderColor: "#e6e6e7" }}
               >
                 <img src={slide.img} alt="" className="image-cover-2" />
-                <div className="drop-shadow" />
+                {/* <div className="drop-shadow" /> */}
                 <p className="paragraph-regular-8">{slide.title}</p>
                 <div className="column-small flip">
                   <div>

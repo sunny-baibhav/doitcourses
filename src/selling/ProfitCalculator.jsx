@@ -1,16 +1,18 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-const isEcomPage = location.pathname === "/products/ecom";
-const isAgencyPage = location.pathname === "/products/agency";
-const isAmazonPage = location.pathname === "/products/amazon";
-const isSixfigurePage = location.pathname === "/products/sixfigure";
-const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
-const isGhostPage = location.pathname === "/products/ghost";
-const isMarketPage = location.pathname === "/products/market";
-const isCopyPage = location.pathname === "/products/copy";
-const isMoneyPage = location.pathname === "/products/money";
-const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
+
 const ProfitCalculator = () => {
+  const location = useLocation();
+  const isEcomPage = location.pathname === "/products/ecom";
+  const isAgencyPage = location.pathname === "/products/agency";
+  const isAmazonPage = location.pathname === "/products/amazon";
+  const isSixfigurePage = location.pathname === "/products/sixfigure";
+  const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
+  const isGhostPage = location.pathname === "/products/ghost";
+  const isMarketPage = location.pathname === "/products/market";
+  const isCopyPage = location.pathname === "/products/copy";
+  const isMoneyPage = location.pathname === "/products/money";
+  const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
   return (
     <section style={{
       backgroundColor: isEcomPage
@@ -64,10 +66,10 @@ const ProfitCalculator = () => {
                     <div>
                       You resell{" "}
                       <span
-                        data-product-name="Ecom Prodigy"
+                        data-product-name={isSixfigurePage ? "Profit Up" : "Ecom Prodigy"}
                         className="products-name"
                       >
-                        Ecom Prodigy
+                        {isSixfigurePage ? "Profit Up" : "Ecom Prodigy"}
                       </span>{" "}
                       for
                     </div>
@@ -127,10 +129,10 @@ const ProfitCalculator = () => {
                     <div>
                       students buy{" "}
                       <span
-                        data-product-name="Ecom Prodigy"
+                        data-product-name={isSixfigurePage ? "Profit Up" : "Ecom Prodigy"}
                         className="products-name"
                       >
-                        Ecom Prodigy
+                        {isSixfigurePage ? "Profit Up" : "Ecom Prodigy"}
                       </span>{" "}
                       monthly
                     </div>

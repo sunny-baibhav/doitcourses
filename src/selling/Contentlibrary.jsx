@@ -1,16 +1,18 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-const isEcomPage = location.pathname === "/products/ecom";
-const isAgencyPage = location.pathname === "/products/agency";
-const isAmazonPage = location.pathname === "/products/amazon";
-const isSixfigurePage = location.pathname === "/products/sixfigure";
-const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
-const isGhostPage = location.pathname === "/products/ghost";
-const isMarketPage = location.pathname === "/products/market";
-const isCopyPage = location.pathname === "/products/copy";
-const isMoneyPage = location.pathname === "/products/money";
-const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
+
 const Contentlibrary = () => {
+  const location = useLocation();
+  const isEcomPage = location.pathname === "/products/ecom";
+  const isAgencyPage = location.pathname === "/products/agency";
+  const isAmazonPage = location.pathname === "/products/amazon";
+  const isSixfigurePage = location.pathname === "/products/sixfigure";
+  const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
+  const isGhostPage = location.pathname === "/products/ghost";
+  const isMarketPage = location.pathname === "/products/market";
+  const isCopyPage = location.pathname === "/products/copy";
+  const isMoneyPage = location.pathname === "/products/money";
+  const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
   return (
     <section
     id="content-library"
@@ -52,8 +54,8 @@ const Contentlibrary = () => {
         />
         <h2 className="green">
           Plus, all the content you'll ever need to market and sell{" "}
-          <span data-product-name="Ecom Prodigy" className="products-name">
-            Ecom Prodigy
+          <span data-product-name={isSixfigurePage ? "Profit Up" : "Ecom Prodigy"} className="products-name">
+            {isSixfigurePage ? "Profit Up" : "Ecom Prodigy"}
           </span>
         </h2>
         <p className="paragraph-large">

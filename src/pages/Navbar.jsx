@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const isEcomPage = location.pathname === "/products/ecom";
+  const isSixFigurePage = location.pathname === "/products/sixfigure";
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
@@ -116,6 +117,8 @@ const Navbar = () => {
       img: "https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e51155528a4510a79a5d_Frame%2062.avif",
     },
   ];
+  const logoSrc = isEcomPage ? "/2e.png" : isSixFigurePage ? "/profitup.png" : "/home.svg";
+  
 
   return (
     <div className="navbar">
@@ -150,51 +153,75 @@ const Navbar = () => {
         className="nav-bar w-nav"
         style={{
           willChange: "background",
-          backgroundColor: isEcomPage ? "#1a2603" : "#ffffff",
+          backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : "#ffffff",
         }}
       >
-        <div className="nav-container">
-          {/* Logo */}
-          <a href="/" className="nav-logo-link w-inline-block w--current" style={{ textDecoration: "none", borderBottom: "none" }}>
+       <div className="nav-container">
+          {/* ✅ Logo Section */}
+          <a
+            href="/"
+            className="nav-logo-link w-inline-block w--current"
+            style={{ textDecoration: "none", borderBottom: "none" }}
+          >
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-              {/* Icon Box */}
-              <div style={{
-                width: "66px",
-                height: "55px",
-                backgroundColor: "#f8f9fa",
-                border: "1px solid #e9ecef",
-                borderRadius: "12px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-              }}>
+              {/* ✅ Conditional Logo Styles */}
+              {logoSrc === "/home.svg" ? (
+                // HOME LOGO: Logo inside box
+                <div
+                  style={{
+                    width: isMobile ? "50px" : "66px",
+                    height: isMobile ? "42px" : "55px",
+                    backgroundColor: "#f8f9fa",
+                    border: "1px solid #e9ecef",
+                    borderRadius: "12px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                  }}
+                >
+                  <img
+                    src={logoSrc}
+                    loading="lazy"
+                    alt="Doitcourse Logo"
+                    className="logo"
+                    style={{
+                      width: isMobile ? "35px" : "45px",
+                      height: isMobile ? "35px" : "45px",
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
+              ) : (
+                // OTHER LOGOS: Same size as home logo (without box)
                 <img
-                  src="/home.svg"
+                  src={logoSrc}
                   loading="lazy"
                   alt="Doitcourse Logo"
                   className="logo"
                   style={{
-                    width: "45px",
-                    height: "45px",
+                    width: isMobile ? "35px" : "111px",
+                    height: isMobile ? "35px" : "83px",
                     objectFit: "contain",
+                    borderRadius: "0px",
+                    boxShadow: "none",
                   }}
                 />
-              </div>
-               <h3
-                 style={{
-                   margin: 0,
-                   fontSize: "24px",
-                   fontWeight: 900,
-                   color: "#333",
-                   textDecoration: "none !important",
-                   fontFamily: "Arial, sans-serif",
-                   borderBottom: "none !important",
-                   outline: "none",
-                 }}
-               >
-                 Doitcourse
-               </h3>
+              )}
+              {logoSrc === "/home.svg" && (
+                <h3
+                  style={{
+                    margin: 0,
+                    fontSize: isMobile ? "18px" : "24px",
+                    fontWeight: 900,
+                    color: "#333",
+                    textDecoration: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                >
+                  Doitcourse
+                </h3>
+              )}
 
             </div>
           </a>
@@ -210,17 +237,17 @@ const Navbar = () => {
               onClick={() => { if (isMobile) { setFeaturesOpen((o) => !o); if (!featuresOpen) setCoursesOpen(false); } }}
               style={{
                 position: "relative",
-                backgroundColor: isEcomPage ? "#1a2603" : "#ffffff",
+                backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : "#ffffff",
                 width: isMobile ? "100%" : undefined,
               }}
             >
               <div className="nav-toggle w-dropdown-toggle">
-                <div style={{ color: isEcomPage ? "#ffffff" : "#000000" }}>
+                <div style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}>
                   Features
                 </div>
                 <div
                   className="icon-small w-embed"
-                  style={{ color: isEcomPage ? "#ffffff" : "#000000" }}
+                  style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}
                 >
                   <ChevronDown
                     size={16}
@@ -347,17 +374,17 @@ const Navbar = () => {
               onClick={() => { if (isMobile) { setCoursesOpen((o) => !o); if (!coursesOpen) setFeaturesOpen(false); } }}
               style={{
                 position: "relative",
-                backgroundColor: isEcomPage ? "#1a2603" : "#ffffff",
+                backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : "#ffffff",
                 width: isMobile ? "100%" : undefined,
               }}
             >
               <div className="nav-toggle w-dropdown-toggle">
-                <div style={{ color: isEcomPage ? "#ffffff" : "#000000" }}>
+                <div style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}>
                   Courses
                 </div>
                 <div
                   className="icon-small w-embed"
-                  style={{ color: isEcomPage ? "#ffffff" : "#000000" }}
+                  style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}
                 >
                   <ChevronDown
                     size={16}
@@ -508,7 +535,7 @@ const Navbar = () => {
             <a
               href="/"
               className="nav-link w-nav-link"
-              style={{ color: isEcomPage ? "#ffffff" : "#000000" }}
+              style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}
             >
               Pricing
             </a>

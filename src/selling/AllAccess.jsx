@@ -1,16 +1,18 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-const isEcomPage = location.pathname === "/products/ecom";
-const isAgencyPage = location.pathname === "/products/agency";
-const isAmazonPage = location.pathname === "/products/amazon";
-const isSixfigurePage = location.pathname === "/products/sixfigure";
-const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
-const isGhostPage = location.pathname === "/products/ghost";
-const isMarketPage = location.pathname === "/products/market";
-const isCopyPage = location.pathname === "/products/copy";
-const isMoneyPage = location.pathname === "/products/money";
-const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
+
 const AllAccess = () => {
+  const location = useLocation();
+  const isEcomPage = location.pathname === "/products/ecom";
+  const isAgencyPage = location.pathname === "/products/agency";
+  const isAmazonPage = location.pathname === "/products/amazon";
+  const isSixfigurePage = location.pathname === "/products/sixfigure";
+  const isEntrepreneursPage = location.pathname === "/products/entrepreneurs";
+  const isGhostPage = location.pathname === "/products/ghost";
+  const isMarketPage = location.pathname === "/products/market";
+  const isCopyPage = location.pathname === "/products/copy";
+  const isMoneyPage = location.pathname === "/products/money";
+  const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
   return (
     <section
       style={{
@@ -34,7 +36,7 @@ const AllAccess = () => {
           ? "#20002b" // when on /products/money
           : isClickaffiliatePage
           ? "#2b0020" // when on /products/1-click-affiliate
-          : "", // ❌ no default fallback (transparent or inherited)
+          : "#251000", // default fallback
       }}
       className="section no-padding"
     >

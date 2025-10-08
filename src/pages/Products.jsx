@@ -37,10 +37,10 @@ const Products = () => {
               <div role="listitem" className="outline-div hover w-dyn-item">
                 <img
                   loading="lazy"
-                  src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png"
+                  src="1.png"
                   alt=""
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.4140625px, 939.9375px"
-                  srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/683693829a961da73467e160_Frame%2053.png 2136w"
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.4140625px, 939.9375px"                
+                  srcSet="1.png"
                   className="nav-image"
                 />
                 <div className="nav-link-icon">
@@ -125,20 +125,20 @@ const Products = () => {
               <div role="listitem" className="outline-div hover w-dyn-item">
                 <img
                   loading="lazy"
-                  src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061.png"
+                  src="profitup1.png"
                   alt=""
                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.4140625px, 939.9375px"
-                  srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061.png 2136w"
+                  srcSet="profitup1.png"
                   className="nav-image"
                 />
                 <div className="nav-link-icon">
                   <div>
-                    <div className="nav-link-text">Six Figure Closer</div>
+                    <div className="nav-link-text"> Profit Up  </div>
                     <div className="paragraph-small title-case">
                       remote closing course
                     </div>
                     <div className="paragraph-small title-case blue">
-                      7 Lessons • 7 Modules • 4.1 Hours of Content
+                      10 Lessons • 7 Notes • 1 Hours of Content
                     </div>
                   </div>
                 </div>

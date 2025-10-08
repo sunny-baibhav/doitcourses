@@ -13,9 +13,14 @@ const Courses = () => {
             alt=""
             height={50}
             className="h3-image"
+            style={{
+              width: "50%",
+              height: "100%",
+              objectFit: "cover"
+            }}
           />
-          <h3>Rebrand and resell premium courses</h3>
-          <p>
+          <h3 style={{ fontSize: "1.5rem" }}>Rebrand and resell premium courses</h3>
+          <p style={{ fontSize: "0.9rem" }}>
             All courses come <em>free</em> with DropCourse. Access a premium
             library of high-value courses across in-demand niches—ready to
             resell instantly to your audience.{" "}

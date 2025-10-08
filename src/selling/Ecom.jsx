@@ -110,13 +110,19 @@ const Ecom = () => {
         <div className="wrap-h-regular-2 mobile">
           <div className="featured-course white">Course Preview</div>
           <img
-            src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png"
+            src="/2e.png"
             loading="lazy"
             alt=""
-            height={40}
             sizes="100vw"
-            srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/68369a0a7ac8085393f1ce3d_ecomlogo.png 1422w"
+            srcSet="/2e.png"
             className="h3-image course"
+            style={{
+              width: '100%',
+              maxWidth: '212px',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'block'
+            }}
           />
         </div>
         <div className="wrap-h-small course-stats">

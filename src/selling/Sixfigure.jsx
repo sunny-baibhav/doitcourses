@@ -113,14 +113,20 @@ const Sixfigure = () => {
       <div className="wrap-h-regular-2 mobile">
         <div className="featured-course white">Course Preview</div>
         <img
-          src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee2d6497a23937c18360_sixfiglogo.png"
-          loading="lazy"
-          alt=""
-          height={40}
-          sizes="100vw"
-          srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee2d6497a23937c18360_sixfiglogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee2d6497a23937c18360_sixfiglogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee2d6497a23937c18360_sixfiglogo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee2d6497a23937c18360_sixfiglogo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee2d6497a23937c18360_sixfiglogo.png 1836w"
-          className="h3-image course"
-        />
+            src="/profitup.png"
+            loading="lazy"
+            alt=""
+            sizes="100vw"
+            srcSet="/profitup.png"
+            className="h3-image course"
+            style={{
+              width: '100%',
+              maxWidth: '212px',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'block'
+            }}
+          />
       </div>
       <div className="wrap-h-small course-stats">
         <p className="align-centre">7</p>
@@ -144,11 +150,11 @@ const Sixfigure = () => {
         rel="noopener"
       >
         <img
-          src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061.png"
+          src="/profitup1.png"
           loading="lazy"
           alt=""
           sizes="100vw"
-          srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837ee3875c9b8a4fcc1dc37_Frame%2061.png 2136w"
+          srcSet="/profitup1.png"
           className="course-cover"
         />
         <div className="play-button-wrap">
