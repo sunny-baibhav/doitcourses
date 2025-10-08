@@ -200,8 +200,8 @@ const Navbar = () => {
                   alt="Doitcourse Logo"
                   className="logo"
                   style={{
-                    width: isMobile ? "35px" : "111px",
-                    height: isMobile ? "35px" : "83px",
+                    width: isMobile ? "35px" : "222px",
+                    height: isMobile ? "35px" : "108px",
                     objectFit: "contain",
                     borderRadius: "0px",
                     boxShadow: "none",
