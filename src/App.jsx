@@ -32,7 +32,7 @@ import Money from "./selling/Money";
 import Clickaffiliate from "./selling/Clickaffiliate";
 
 // Notifications
-import PurchaseNotification from "./pages/notifications";
+// import PurchaseNotification from "./pages/notifications";
 
 function App() {
   return (
