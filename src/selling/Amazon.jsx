@@ -23,7 +23,7 @@ const Amazon = () => {
           data-wf-native-id-path="483644a6-ee0c-837a-01af-c9c08e8ccf4b"
           data-wf-ao-click-engagement-tracking="true"
           data-wf-element-id="483644a6-ee0c-837a-01af-c9c08e8ccf4b"
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          href="/login"
           className="header-badge products w-inline-block"
           rel="noopener"
         >
@@ -58,7 +58,7 @@ const Amazon = () => {
               borderColor: "#251000",
               color: "#251000"
             }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+            href="/login"
             data-wf-event-ids={157035618}
             className="button-primary products w-inline-block"
             rel="noopener"
@@ -138,7 +138,7 @@ const Amazon = () => {
           data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e38"
           data-wf-ao-click-engagement-tracking="true"
           data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e38"
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          href="/login"
           data-wf-event-ids={157035618}
           className="outline-div course w-inline-block"
           rel="noopener"
@@ -304,7 +304,7 @@ const Amazon = () => {
               borderColor: "#251000",
               color: "#251000"
             }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+            href="/login"
             data-wf-event-ids={157035618}
             className="button-primary products _100 w-inline-block"
             rel="noopener"
@@ -357,7 +357,7 @@ const Amazon = () => {
           data-wf-native-id-path="fa468542-c180-d29c-02fb-5b3f0d5dbd5a"
           data-wf-ao-click-engagement-tracking="true"
           data-wf-element-id="fa468542-c180-d29c-02fb-5b3f0d5dbd5a"
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          href="/login"
           data-wf-event-ids={157035618}
           className="outline-div course w-inline-block"
           rel="noopener"
@@ -385,7 +385,7 @@ const Amazon = () => {
               borderColor: "#251000",
               color: "#251000"
             }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+            href="/login"
             data-wf-event-ids={157035618}
             className="button-primary products _100 w-inline-block"
             rel="noopener"

@@ -13,6 +13,7 @@ const AllAccess = () => {
   const isCopyPage = location.pathname === "/products/copy";
   const isMoneyPage = location.pathname === "/products/money";
   const isClickaffiliatePage = location.pathname === "/products/1-click-affiliate";
+  const isLandingpagePage = location.pathname ==="/products/landingpage" || location.pathname === "/landingpage";
   return (
     <section
       style={{
@@ -36,9 +37,11 @@ const AllAccess = () => {
           ? "#20002b" // when on /products/money
           : isClickaffiliatePage
           ? "#2b0020" // when on /products/1-click-affiliate
+          : isLandingpagePage
+          ? "#1a0c49" // when on /products/landingpage
           : "#251000", // default fallback
       }}
-      className="section no-padding"
+      className="section no-padding" 
     >
     <div className="container-footer">
       <div className="outline-div blur">

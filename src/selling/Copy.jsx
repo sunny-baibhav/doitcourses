@@ -116,13 +116,21 @@ const Copy = () => {
       <div className="wrap-h-regular-2 mobile">
         <div className="featured-course white">Course Preview</div>
         <img
-          src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo.png"
+          src="/copywriting.png"
           loading="lazy"
           alt=""
           height={40}
           sizes="100vw"
-          srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo.png 2344w"
+          srcSet="/copywriting.png"
+          // srcSet="http  s://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo.png 2344w"
           className="h3-image course"
+          style={{
+            width: '100%',
+            maxWidth: '212px',
+            height: 'auto',
+            objectFit: 'contain',
+            display: 'block'
+          }}
         />
       </div>
       <div className="wrap-h-small course-stats">
@@ -345,13 +353,21 @@ const Copy = () => {
       <div className="wrap-h-regular-2 mobile">
         <div className="featured-course white">Community Preview</div>
         <img
-          src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo.png"
+          src="/copywriting.png"
           loading="lazy"
           alt=""
           height={40}
           sizes="100vw"
-          srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo.png 2344w"
+          srcSet="/copywriting.png"
+          // srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1080.png 1080w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-1600.png 1600w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo-p-2000.png 2000w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/688cbece6fc5f1f935305ee9_copywriting%20logo.png 2344w"
           className="h3-image course"
+          style={{
+            width: '100%',
+            maxWidth: '212px',
+            height: 'auto',
+            objectFit: 'contain',
+            display: 'block'
+          }}
         />
       </div>
     </div>

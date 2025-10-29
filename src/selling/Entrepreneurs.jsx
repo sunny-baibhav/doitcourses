@@ -119,13 +119,21 @@ const Entrepreneurs = () => {
       <div className="wrap-h-regular-2 mobile">
         <div className="featured-course white">Course Preview</div>
         <img
-          src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo.png"
+          src="/enterprenur.png"
           loading="lazy"
           alt=""
           height={40}
           sizes="100vw"
-          srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo.png 891w"
+          srcSet="/enterprenur.png"
+          // srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo.png 891w"
           className="h3-image course"
+          style={{
+            width: '100%',
+            maxWidth: '212px',
+            height: 'auto',
+            objectFit: 'contain',
+            display: 'block'
+          }}
         />
       </div>
       <div className="wrap-h-small course-stats">
@@ -348,13 +356,21 @@ const Entrepreneurs = () => {
       <div className="wrap-h-regular-2 mobile">
         <div className="featured-course white">Community Preview</div>
         <img
-          src="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo.png"
+          src="/enterprenur.png"
           loading="lazy"
           alt=""
           height={40}
           sizes="100vw"
-          srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo.png 891w"
+          srcSet="/enterprenur.png"
+          // srcSet="https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-500.png 500w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo-p-800.png 800w, https://cdn.prod.website-files.com/68369353418c3898194fa9f5/6837f6cfe0b8ded3d7b7c523_ealogo.png 891w"
           className="h3-image course"
+          style={{
+            width: '100%',
+            maxWidth: '212px',
+            height: 'auto',
+            objectFit: 'contain',
+            display: 'block'
+          }}
         />
       </div>
     </div>

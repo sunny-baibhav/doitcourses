@@ -6,10 +6,16 @@ const Navbar = () => {
   const location = useLocation();
   const isEcomPage = location.pathname === "/products/ecom";
   const isSixFigurePage = location.pathname === "/products/sixfigure";
-
+  const isBluePrint = location.pathname === "/products/agency"
+  const isGhost = location.pathname === "/products/ghost"
+  const isEntrepreneurs = location.pathname === "/products/entrepreneurs"
+  const isMarket = location.pathname === "/products/market"
+  const isMoney = location.pathname === "/products/money"
+  const isCopywriting = location.pathname === "/products/copy"
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const featuresRef = useRef(null);
   const coursesRef = useRef(null);
 
@@ -51,7 +57,7 @@ const Navbar = () => {
     {
       title: "Course Editor",
       desc: "Customise, white-label & make it yours",
-      icon: "✏️",
+      icon: "✏",
       bgColor: "#4CAFE5",
       link: "/products",
     },
@@ -81,7 +87,7 @@ const Navbar = () => {
       desc: "Built-in AI course content assistants",
       icon: "✨",
       bgColor: "#9C27B0",
-      link: "https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04",
+      link: "/login",
     },
   ];
 
@@ -117,15 +123,15 @@ const Navbar = () => {
       img: "https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6819e51155528a4510a79a5d_Frame%2062.avif",
     },
   ];
-  const logoSrc = isEcomPage ? "/2e.png" : isSixFigurePage ? "/profitup.png" : "/home.svg";
-  
+
+  const logoSrc = isEcomPage ? "/2e.png" : isSixFigurePage ? "/profitup.png" : isBluePrint ? "/agency.png" : isGhost ? "/ghoste.png" : isEntrepreneurs ? "/enterprenur.png" : isMarket ? "/market.png" : isMoney ? "/moneygram.png" : isCopywriting ? "/copywriting.png" : "/home.svg";
 
   return (
     <div className="navbar">
       {/* Top Banner */}
       {/* <div className="banner" style={{ backgroundColor: "#0a421e" }}>
     <a
-      href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+      href="/login"
       className="banner-wrapper w-inline-block"
       rel="noopener"
         >
@@ -153,10 +159,10 @@ const Navbar = () => {
         className="nav-bar w-nav"
         style={{
           willChange: "background",
-          backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : "#ffffff",
+          backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : isBluePrint ? "#000d1e" : isGhost ? "#2b0001" : isEntrepreneurs ? "#2b1f00" : isMarket ? "#001706" : isMoney ? "#20002b" : isCopywriting ? "#001e09" : "#ffffff",
         }}
       >
-       <div className="nav-container">
+        <div className="nav-container">
           {/* ✅ Logo Section */}
           <a
             href="/"
@@ -222,12 +228,73 @@ const Navbar = () => {
                   Doitcourse
                 </h3>
               )}
-
             </div>
           </a>
 
+          {/* Hamburger Menu Button (Mobile Only) */}
+          {isMobile && (
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: "8px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "4px",
+                zIndex: 1001,
+              }}
+              aria-label="Toggle menu"
+            >
+              <span
+                style={{
+                  width: "24px",
+                  height: "2px",
+                  backgroundColor: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#dc60ff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000",
+                  transition: "all 0.3s ease",
+                  transform: mobileMenuOpen ? "rotate(45deg) translateY(6px)" : "none",
+                }}
+              />
+              <span
+                style={{
+                  width: "24px",
+                  height: "2px",
+                  backgroundColor: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#dc60ff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000",
+                  transition: "all 0.3s ease",
+                  opacity: mobileMenuOpen ? 0 : 1,
+                }}
+              />
+              <span
+                style={{
+                  width: "24px",
+                  height: "2px",
+                  backgroundColor: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#dc60ff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000",
+                  transition: "all 0.3s ease",
+                  transform: mobileMenuOpen ? "rotate(-45deg) translateY(-6px)" : "none",
+                }}
+              />
+            </button>
+          )}
+
           {/* Nav Menu */}
-          <nav role="navigation" className="nav-menu w-nav-menu">
+          <nav
+            role="navigation"
+            className="nav-menu w-nav-menu"
+            style={{
+              display: isMobile ? (mobileMenuOpen ? "flex" : "none") : "flex",
+              position: isMobile ? "fixed" : "static",
+              top: isMobile ? "70px" : "auto",
+              left: isMobile ? "0" : "auto",
+              right: isMobile ? "0" : "auto",
+              backgroundColor: isMobile ? (isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : isMarket ? "#001706" : isMoney ? "#20002b" : isCopywriting ? "#001e09" : isBluePrint ? "#000d1e" : isGhost ? "#2b0001" : isEntrepreneurs ? "#2b1f00" : "#ffffff") : "transparent",
+              flexDirection: isMobile ? "column" : "row",
+              padding: isMobile ? "20px" : "0",
+              zIndex: 1000,
+              maxHeight: isMobile ? "calc(100vh - 70px)" : "none",
+              overflowY: isMobile ? "auto" : "visible",
+            }}
+          >
             {/* Features Dropdown */}
             <div
               className="nav-dropdown w-dropdown"
@@ -237,17 +304,17 @@ const Navbar = () => {
               onClick={() => { if (isMobile) { setFeaturesOpen((o) => !o); if (!featuresOpen) setCoursesOpen(false); } }}
               style={{
                 position: "relative",
-                backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : "#ffffff",
+                backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : isMarket ? "#001706" : isMoney ? "#20002b" : isCopywriting ? "#001e09" : isBluePrint ? "#000d1e" : isGhost ? "#2b0001" : isEntrepreneurs ? "#2b1f00" : "#ffffff",
                 width: isMobile ? "100%" : undefined,
               }}
             >
               <div className="nav-toggle w-dropdown-toggle">
-                <div style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}>
+                <div style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#ffffff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000" }}>
                   Features
                 </div>
                 <div
                   className="icon-small w-embed"
-                  style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}
+                  style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#ffffff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000" }}
                 >
                   <ChevronDown
                     size={16}
@@ -374,17 +441,17 @@ const Navbar = () => {
               onClick={() => { if (isMobile) { setCoursesOpen((o) => !o); if (!coursesOpen) setFeaturesOpen(false); } }}
               style={{
                 position: "relative",
-                backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : "#ffffff",
+                backgroundColor: isEcomPage ? "#1a2603" : isSixFigurePage ? "#002b29" : isMarket ? "#001706" : isMoney ? "#20002b" : isCopywriting ? "#001e09" : isBluePrint ? "#000d1e" : isGhost ? "#2b0001" : isEntrepreneurs ? "#2b1f00" : "#ffffff",
                 width: isMobile ? "100%" : undefined,
               }}
             >
               <div className="nav-toggle w-dropdown-toggle">
-                <div style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}>
+                <div style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#ffffff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000" }}>
                   Courses
                 </div>
                 <div
                   className="icon-small w-embed"
-                  style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}
+                  style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#ffffff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000" }}
                 >
                   <ChevronDown
                     size={16}
@@ -442,7 +509,7 @@ const Navbar = () => {
                         {courses.map((course, index) => (
                           <a
                             key={index}
-                            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                            href="/login"
                             className="nav-feature-link-l w-inline-block"
                             style={{
                               display: "flex",
@@ -535,14 +602,86 @@ const Navbar = () => {
             <a
               href="/"
               className="nav-link w-nav-link"
-              style={{ color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : "#000000" }}
+              style={{
+                color: isEcomPage ? "#ffffff" : isSixFigurePage ? "#ffffff" : isMarket ? "#ffffff" : isMoney ? "#dc60ff" : isCopywriting ? "#ffffff" : isBluePrint ? "#ffffff" : isGhost ? "#ffffff" : isEntrepreneurs ? "#ffffff" : "#000000",
+                padding: isMobile ? "12px 0" : "0",
+                width: isMobile ? "100%" : "auto",
+              }}
+              onClick={() => { if (isMobile) setMobileMenuOpen(false); }}
             >
               Pricing
             </a>
+
+            {/* Mobile Buttons */}
+            {isMobile && (
+              <div style={{ marginTop: "20px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                {isEcomPage ? (
+                  <a
+                    style={{
+                      backgroundColor: "#a4d54a",
+                      borderColor: "#1a2603",
+                      color: "#1a2603",
+                      padding: "12px 20px",
+                      borderRadius: "6px",
+                      fontWeight: "600",
+                      textDecoration: "none",
+                      display: "block",
+                      textAlign: "center",
+                      transition: "all 0.2s ease",
+                    }}
+                    href="/login"
+                    rel="noopener"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <div>
+                      Resell now <span className="arrow">→</span>
+                    </div>
+                  </a>
+                ) : (
+                  <>
+                    <a
+                      href="/login"
+                      style={{
+                        padding: "12px 20px",
+                        borderRadius: "6px",
+                        fontWeight: "600",
+                        textDecoration: "none",
+                        display: "block",
+                        textAlign: "center",
+                        border: "2px solid #235ae9",
+                        color: "#235ae9",
+                      }}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div>Log in</div>
+                    </a>
+                    <a
+                      href="/login"
+                      rel="noopener"
+                      style={{
+                        padding: "12px 20px",
+                        borderRadius: "6px",
+                        fontWeight: "600",
+                        textDecoration: "none",
+                        display: "block",
+                        textAlign: "center",
+                        backgroundColor: "#235ae9",
+                        color: "white",
+                      }}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div>
+                        Start now <span className="arrow">→</span>
+                      </div>
+                    </a>
+                  </>
+                )}
+              </div>
+            )}
           </nav>
 
           {/* Right Buttons */}
-          <div className="nav-button-group">
+          <div className="nav-button-group" style={{ display: isMobile ? "none" : "flex" }}>
             {isEcomPage ? (
               <a
                 data-wf-native-id-path="6f244790-4ba3-360c-6ed5-bcdb081af4f6"
@@ -559,7 +698,7 @@ const Navbar = () => {
                   display: "inline-block",
                   transition: "all 0.2s ease",
                 }}
-                href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                href="/login"
                 data-wf-event-ids={157035618}
                 className="button-primary products nav mobile-hide w-inline-block"
                 rel="noopener"
@@ -585,7 +724,7 @@ const Navbar = () => {
                   <div>Log in</div>
                 </a>
                 <a
-                  href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+                  href="/"
                   className="button-primary nav mobile-hide w-inline-block"
                   rel="noopener"
                   style={{
@@ -603,7 +742,6 @@ const Navbar = () => {
               </>
             )}
           </div>
-
         </div>
       </div>
     </div>
@@ -611,4 +749,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

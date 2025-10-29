@@ -8,7 +8,6 @@ import Platform from './Platform'
 import Liveresults from './Liveresults'
 import Editor from './Editor'
 import Content from './Content'
-import Landing from './Landing'
 import GetPaid from './GetPaid'
 import Selling from './Selling'
 import Pricing from './Pricing'
@@ -27,7 +26,7 @@ const Home = () => {
     <Liveresults/>
     <Editor/>
     <Content/>
-    <Landing/>
+    
     <GetPaid/>
     <Selling/>
     <Pricing/>

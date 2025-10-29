@@ -66,7 +66,7 @@ const ProductsStats = () => {
       </p>
       <div className="_3-grid stats">
         <div href="#" className="testimonials-div products">
-          <div style={{ backgroundColor: "#1a2603" }} className="stats-div">
+          <div style={{ backgroundColor:    isEcomPage ? "#1a2603" : isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : "#251000" }} className="stats-div">
             <h2
               style={{ backgroundColor: "#a4d54a", color: "#1a2603" }}
               className="stat"
@@ -81,7 +81,7 @@ const ProductsStats = () => {
           data-forced-hover=""
           className="testimonials-div products"
         >
-          <div style={{ backgroundColor: "#1a2603" }} className="stats-div">
+          <div style={{ backgroundColor: isEcomPage ? "#1a2603" : isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : "#251000" }} className="stats-div">
             <h2
               style={{ backgroundColor: "#a4d54a", color: "#1a2603" }}
               className="stat"
@@ -92,7 +92,7 @@ const ProductsStats = () => {
           </div>
         </div>
         <div href="#" className="testimonials-div products">
-          <div style={{ backgroundColor: "#1a2603" }} className="stats-div">
+          <div style={{ backgroundColor:   isEcomPage ? "#1a2603" : isAgencyPage ? "#000d1e" : isAmazonPage ? "#251000" : isSixfigurePage ? "#002b29" : isEntrepreneursPage ? "#2b1f00" : isGhostPage ? "#2b0001" : isMarketPage ? "#001706" : isCopyPage ? "#001e09" : isMoneyPage ? "#20002b" : isClickaffiliatePage ? "#2b0020" : "#251000" }} className="stats-div">
             <h2
               style={{ backgroundColor: "#a4d54a", color: "#1a2603" }}
               className="stat"
