@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const Navbar1 = () => {
+const Navbar1 = ({currentSectionColor }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [navBackground, setNavBackground] = useState("#20002b");
+  // const [navBackground, setNavBackground] = useState("#20002b");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -136,6 +136,11 @@ const Navbar1 = () => {
       window.location.href = "/";
     } catch (_) {}
   };
+  useEffect(() => {
+    setNavBackground(currentSectionColor);
+  }, [currentSectionColor]);
+
+  const [navBackground, setNavBackground] = useState(currentSectionColor);
 
   return (
     <div className="navbar">
@@ -143,9 +148,9 @@ const Navbar1 = () => {
       <div
         className="nav-bar w-nav"
         style={{
-          willChange: "background",
           backgroundColor: navBackground,
-          transition: "background-color 200ms ease",
+          transition: "background-color 300ms ease-in-out",
+          willChange: "background-color",
         }}
       >
         <div

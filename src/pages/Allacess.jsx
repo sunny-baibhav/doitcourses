@@ -19,6 +19,11 @@ const Allacess = () => {
               alt=""
               srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6868cb51d74e445c7fd5a2c3_Group%2029-p-500.png 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/6868cb51d74e445c7fd5a2c3_Group%2029.png 626w"
               className="h3-image"
+              style={{
+                maxWidth: "41%",
+                height: "auto",
+                width: "auto",
+              }}
             />
             <div>
               <h3 className="white">The one ultimate plan,</h3>
@@ -70,6 +75,11 @@ const Allacess = () => {
             srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68d5f6e06da9b951eef9f96e_Group%2019-p-500.png 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68d5f6e06da9b951eef9f96e_Group%2019-p-800.png 800w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68d5f6e06da9b951eef9f96e_Group%2019-p-1080.png 1080w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/68d5f6e06da9b951eef9f96e_Group%2019.png 1426w"
             alt=""
             className="h3-image"
+            style={{
+              maxWidth: "41%",
+              height: "auto",
+              width: "auto",
+            }}
           />
         </div>
         <p>

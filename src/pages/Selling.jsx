@@ -42,6 +42,11 @@ const Selling = () => {
                   alt=""
                   height={50}
                   className="h3-image"
+                  style={{
+                    maxWidth: "41%",
+                    height: "auto",
+                    width: "auto",
+                  }}
                 />
               </div>
               <h3>Premium courses built by experts</h3>
@@ -72,6 +77,11 @@ const Selling = () => {
                   alt=""
                   srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5675194eaa91d49e4_Group%2017-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5675194eaa91d49e4_Group%2017.avif 2074w"
                   className="h3-image"
+                  style={{
+                    maxWidth: "41%",
+                    height: "auto",
+                    width: "auto",
+                  }}
                 />
               </div>
               <h3>Customise &amp; make it yours</h3>
@@ -103,6 +113,11 @@ const Selling = () => {
                   alt=""
                   srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5de41c8f1ef291a01_Group%2018-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5de41c8f1ef291a01_Group%2018.avif 2089w"
                   className="h3-image"
+                  style={{
+                    maxWidth: "41%",
+                    height: "auto",
+                    width: "auto",
+                  }}
                 />
               </div>
               <h3>Instant 2k+ member community</h3>
@@ -133,6 +148,11 @@ const Selling = () => {
                   alt=""
                   srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5def8a373076506a0_Group%2013-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5def8a373076506a0_Group%2013.avif 2323w"
                   className="h3-image"
+                  style={{
+                    maxWidth: "41%",
+                    height: "auto",
+                    width: "auto",
+                  }}
                 />
               </div>
               <h3>25k+ pre-edited videos to go viral</h3>
@@ -164,6 +184,11 @@ const Selling = () => {
                   alt=""
                   srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5a7894ae9b01ab827_Group%2015-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c5a7894ae9b01ab827_Group%2015.avif 2179w"
                   className="h3-image"
+                  style={{
+                    maxWidth: "41%",
+                    height: "auto",
+                    width: "auto",
+                  }}
                 />
               </div>
               <h3>Plug &amp; play landing pages in 2 mins</h3>
@@ -197,6 +222,11 @@ const Selling = () => {
                   alt=""
                   srcSet="https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c518a9ed71db323afa_Group%2014-p-500.avif 500w, https://cdn.prod.website-files.com/67b96fd14bb10523b8a51725/686377c518a9ed71db323afa_Group%2014.avif 2020w"
                   className="h3-image"
+                  style={{
+                    maxWidth: "41%",
+                    height: "auto",
+                    width: "auto",
+                  }}
                 />
               </div>
               <h3>Built-in AI course content assistants</h3>

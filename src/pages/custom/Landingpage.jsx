@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import AllAccess from '../Allacess'
-import Faq from '../Faq'
-import DropCoursing from '../DropCoursing'
+
 import Navbar1 from './Navbar1'
 import Footer1 from './Footer1'
+import EditPriceDialog from './EditPriceDialog'
 const Landingpage = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
+  const [currentSectionColor, setCurrentSectionColor] = useState("");
   const faqs = [
     {
       question: "Do I get to keep 100% of the Profit?",
@@ -34,20 +33,88 @@ const Landingpage = () => {
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  const sectionColors = [
+    { id: "money-gram-section", color: "#20002b" },
+    { id: "ecom-prodigy-section", color: "#1a2603" },
+    { id: "amazon-dropship-section", color: "#251000" },
+    { id: "ghost-creator-section", color: "#2b0001" },
+    { id: "market-mastery-section", color: "#001706" },
+    { id: "cta-section", color: "#3a2581" },
+    { id: "faq-section", color: "#1a0c49" },
+  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100;
+      
+      for (let i = sectionColors.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sectionColors[i].id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            setCurrentSectionColor(sectionColors[i].color);
+            console.log(sectionColors[i].color);
+            break;
+          }
+        }
+      }
+    };
+    console.log(sectionColors); 
+    
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const [moneyGramPrice, setMoneyGramPrice] = useState(499);
+const [moneyGramOpen, setMoneyGramOpen] = useState(false);
+
+const [ecomProdigyPrice, setEcomProdigyPrice] = useState(499);
+const [ecomProdigyOpen, setEcomProdigyOpen] = useState(false);
+// You can dynamically change this
+const [amazonPrice , setAmazonPrice] = useState(499)
+const [amazonOpen , setAmazonOpen] = useState(false)
+
+const [ghostPrice , setGhostPrice] = useState(499)
+const [ghostOpen , setGhostOpen] = useState(false)
+
+
+const [marketPrice , setMarketPrice] = useState(499)
+const [marketOpen , setMarketOpen] = useState(false)
+
+const handleMoneyGramOpen = () => setMoneyGramOpen(true);
+const handleMoneyGramClose = () => setMoneyGramOpen(false);
+
+// Handlers for Ecom Prodigy
+const handleEcomProdigyOpen = () => setEcomProdigyOpen(true);
+const handleEcomProdigyClose = () => setEcomProdigyOpen(false);
+
+const handleamazonOpen = () => setAmazonOpen(true);
+const handleamazonClose = () => setAmazonOpen(false);
+
+const handleghostOpen = () => setGhostOpen(true);
+const handleghostClose = () => setGhostOpen(false);
+
+const handlemarketOpen = () => setMarketOpen(true);
+const handlemarketClose = () => setMarketOpen(false);
 
   return (
 
  <>
+
  
-<Navbar1/>
+ <Navbar1 currentSectionColor={currentSectionColor} />
+ <div style={{ paddingTop: "80px" }}>
 {/* Courses Section with Framer Motion */}
 <motion.section
   initial={{ opacity: 0, y: 100 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   viewport={{ once: true, amount: 0.3 }}
-  style={{ backgroundColor: "#20002b" }}
+  style={{ backgroundColor:currentSectionColor }}
   className="section products hero"
+  id= "money-gram-section"
 >
   <div className="container">
     <motion.div 
@@ -217,204 +284,89 @@ const Landingpage = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="wrap-v-small"
       >
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          data-tick={1} 
-          className="course-module checked"
-        >
-          <a
-            data-tick={1}
-            data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-            href="#"
-            className="tick-box checked white w-inline-block"
+    
+    
+   
+
+      {/* ---------- BUTTON SECTION ---------- */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={18}
+            height={18}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#dc60ff"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <div className="w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={16}
-                height={9}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 6 L9 17 L4 12"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </a>
-          <div>
-            <strong>Module 1, Episode 1:</strong> Intro to{" "}
-            <span data-product-name="Money Gram" className="products-name">
-              Money Gram
-            </span>{" "}
-          </div>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          data-tick={2} 
-          className="course-module checked"
-        >
-          <a
-            data-tick={2}
-            data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e41"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e41"
-            href="#"
-            className="tick-box checked white w-inline-block"
-          >
-            <div className="w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={16}
-                height={9}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 6 L9 17 L4 12"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </a>
-          <div>
-            <strong>Module 1, Episode 2:</strong> Learn the tech-stack &nbsp;
-          </div>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-          viewport={{ once: true, amount: 0.3 }}
-          data-tick={3} 
-          className="course-module"
-        >
-          <a
-            data-tick={3}
-            data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e46"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e46"
-            href="#"
-            className="tick-box white w-inline-block"
-          >
-            <div className="w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={16}
-                height={9}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 6 L9 17 L4 12"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </a>
-          <div>
-            <strong>Module 1, Episode 3:</strong> Mindset mastery
-          </div>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.3 }}
-          viewport={{ once: true, amount: 0.3 }}
-          className="course-module relative"
-        >
-          <a
-            data-tick={4}
-            data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-            href="#"
-            className="tick-box white blur w-inline-block"
-          >
-            <div className="w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={16}
-                height={9}
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 6 L9 17 L4 12"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </a>
-          <div className="blurred">Module 1, Episode 4: The first steps</div>
-          <div className="lock">
-            <div>Purchase to unlock the full course 🔐</div>
-          </div>
-        </motion.div>
-        <motion.a
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          viewport={{ once: true, amount: 0.3 }}
-          data-wf-native-id-path="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-          data-wf-ao-click-engagement-tracking="true"
-          data-wf-element-id="c96c1b3d-b8f0-842e-4de5-664436c7503b"
+            <path d="M20 6 L9 17 L4 12" />
+          </svg>
+        
+        </div>
+        <div className="text-[#dc60ff] font-semibold flex items-center gap-1">
+          <span>💰</span>Price: ${moneyGramPrice}
+        </div>
+      </motion.div>
+
+      {/* ---------- ACTION BOX ---------- */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center gap-4 mt-6"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        {/* EDIT PRICE BUTTON */}
+        <button
+          onClick={handleMoneyGramOpen}
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
           style={{
+            maxWidth: "550px",
+            margin: "auto",
             backgroundColor: "#dc60ff",
-            borderColor: "#20002b",
-            color: "#20002b"
+            color: "#20002b",
+            border: "1px solid #dc60ff",
           }}
-          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-          data-wf-event-ids={157035618}
-          className="button-primary products _100 w-inline-block"
-          rel="noopener"
         >
-          <div className="dupe-icon w-embed">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 100 100"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={8}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              {/* flip horizontally: move right by 100 then scale X by –1 */}
-              <g transform="translate(100, 0) scale(-1, 1)">
-                {/* Back sheet */}
-                <rect x={8} y={12} width={60} height={60} rx={10} />
-                {/* Front sheet */}
-                <rect x={20} y={28} width={60} height={60} rx={10} />
-              </g>
-            </svg>
-          </div>
-          <div>
-            Duplicate Course<strong> </strong>
-          </div>
-        </motion.a>
+          ✏️ Edit Price (${moneyGramPrice})
+        </button>
+
+        {/* BUY NOW BUTTON */}
+        <a
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          rel="noopener noreferrer"
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "##000000",
+            color: "#fff",
+            // border: "1px solid #dc60ff",
+          }}
+        >
+          🛒 Buy Now
+        </a>
+      </motion.div>
+
+      {/* POPUP DIALOG */}
+      <EditPriceDialog
+  open={moneyGramOpen}
+  handleClose={handleMoneyGramClose}
+  price={moneyGramPrice}
+  setPrice={setMoneyGramPrice}
+  courseId="money-gram"
+/>
       </motion.div>
     </div>
   </motion.div>
@@ -427,8 +379,9 @@ const Landingpage = () => {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   viewport={{ once: true, amount: 0.3 }}
-  style={{ backgroundColor: "#1a2603" }}
+  style={{ backgroundColor: currentSectionColor }}
   className="section products hero"
+  id= "ecom-prodigy-section"
 >
   <div className="container">
     <motion.div 
@@ -606,204 +559,86 @@ const Landingpage = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="wrap-v-small"
         >
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            data-tick={1} 
-            className="course-module checked"
+         
+         
+         <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={18}
+            height={18}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#dc60ff"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <a
-              data-tick={1}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 1:</strong> Intro to{" "}
-              <span data-product-name="Ecom Prodigy" className="products-name">
-                Ecom Prodigy
-              </span>{" "}
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            data-tick={2} 
-            className="course-module checked"
-          >
-            <a
-              data-tick={2}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 2:</strong> Learn the tech-stack &nbsp;
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
-            viewport={{ once: true, amount: 0.3 }}
-            data-tick={3} 
-            className="course-module"
-          >
-            <a
-              data-tick={3}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              href="#"
-              className="tick-box white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 3:</strong> Mindset mastery
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}Happy Students
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="course-module relative"
-          >
-            <a
-              data-tick={4}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              href="#"
-              className="tick-box white blur w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div className="blurred">Module 1, Episode 4: The first steps</div>
-            <div className="lock">
-              <div>Purchase to unlock the full course 🔐</div>
-            </div>
-          </motion.div>
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            viewport={{ once: true, amount: 0.3 }}
-            data-wf-native-id-path="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            style={{
-              backgroundColor: "#a4d54a",
-              borderColor: "#1a2603",
-              color: "#1a2603"
-            }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-            data-wf-event-ids={157035618}
-            className="button-primary products _100 w-inline-block"
-            rel="noopener"
-          >
-            <div className="dupe-icon w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={8}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {/* flip horizontally: move right by 100 then scale X by –1 */}
-                <g transform="translate(100, 0) scale(-1, 1)">
-                  {/* Back sheet */}
-                  <rect x={8} y={12} width={60} height={60} rx={10} />
-                  {/* Front sheet */}
-                  <rect x={20} y={28} width={60} height={60} rx={10} />
-                </g>
-              </svg>
-            </div>
-            <div>
-              Duplicate Course<strong> </strong>
-            </div>
-          </motion.a>
+            <path d="M20 6 L9 17 L4 12" />
+          </svg>
+        
+        </div>
+        <div className="text-[#dc60ff] font-semibold flex items-center gap-1">
+          <span>💰</span>Price: ${ecomProdigyPrice}
+        </div>
+      </motion.div>
+
+      {/* ---------- ACTION BOX ---------- */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center gap-4 mt-6"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        {/* EDIT PRICE BUTTON */}
+        <button
+          onClick={handleEcomProdigyOpen}
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "#a4d54a",
+            color: "#20002b",
+            border: "1px solid #dc60ff",
+          }}
+        >
+          ✏️ Edit Price (${ecomProdigyPrice})
+        </button>
+
+        {/* BUY NOW BUTTON */}
+        <a
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          rel="noopener noreferrer"
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "##000000",
+            color: "#fff",
+            // border: "1px solid #dc60ff",
+          }}
+        >
+          🛒 Buy Now
+        </a>
+      </motion.div>
+
+      {/* POPUP DIALOG */}
+      <EditPriceDialog
+  open={ecomProdigyOpen}
+  handleClose={handleEcomProdigyClose}
+  price={ecomProdigyPrice}
+  setPrice={setEcomProdigyPrice}
+  courseId="ecom-prodigy"
+/>
         </motion.div>
       </div>
     </motion.div>
@@ -929,14 +764,17 @@ const Landingpage = () => {
       </div>
     </motion.div>
   </motion.section>
+{/* getElementById */}
 
+{/* amazon */}
   <motion.section
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.3 }}
-    style={{ backgroundColor: "#251000" }}
+    style={{ backgroundColor: currentSectionColor }}
     className="section products hero"
+    id="amazon-dropship-section"
   >
     <div className="container">
       <motion.div 
@@ -1176,209 +1014,84 @@ const Landingpage = () => {
           viewport={{ once: true }}
           className="wrap-v-small"
         >
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.4 }}
-            viewport={{ once: true }}
-            data-tick={1} 
-            className="course-module checked"
+           <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={18}
+            height={18}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#dc60ff"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <a
-              data-tick={1}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 1:</strong> Intro to{" "}
-              <span
-                data-product-name="Amazon Dropship Pro"
-                className="products-name"
-              >
-                Amazon Dropship Pro
-              </span>{" "}
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.5 }}
-            viewport={{ once: true }}
-            data-tick={2} 
-            className="course-module checked"
-          >
-            <a
-              data-tick={2}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 2:</strong> Learn the tech-stack &nbsp;
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.6 }}
-            viewport={{ once: true }}
-            data-tick={3} 
-            className="course-module"
-          >
-            <a
-              data-tick={3}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              href="#"
-              className="tick-box white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 3:</strong> Mindset mastery
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.7 }}
-            viewport={{ once: true }}
-            className="course-module relative"
-          >
-            <a
-              data-tick={4}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              href="#"
-              className="tick-box white blur w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div className="blurred">Module 1, Episode 4: The first steps</div>
-            <div className="lock">
-              <div>Purchase to unlock the full course 🔐</div>
-            </div>
-          </motion.div>
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3, delay: 1.8 }}
-            viewport={{ once: true }}
-            data-wf-native-id-path="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            style={{
-              backgroundColor: "#ff842b",
-              borderColor: "#251000",
-              color: "#251000"
-            }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-            data-wf-event-ids={157035618}
-            className="button-primary products _100 w-inline-block"
-            rel="noopener"
-          >
-            <div className="dupe-icon w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={8}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {/* flip horizontally: move right by 100 then scale X by –1 */}
-                <g transform="translate(100, 0) scale(-1, 1)">
-                  {/* Back sheet */}
-                  <rect x={8} y={12} width={60} height={60} rx={10} />
-                  {/* Front sheet */}
-                  <rect x={20} y={28} width={60} height={60} rx={10} />
-                </g>
-              </svg>
-            </div>
-            <div>
-              Duplicate Course<strong> </strong>
-            </div>
-          </motion.a>
+            <path d="M20 6 L9 17 L4 12" />
+          </svg>
+        
+        </div>
+        <div className="text-[#dc60ff] font-semibold flex items-center gap-1">
+          <span>💰</span>Price: ${amazonPrice}
+        </div>
+      </motion.div>
+
+      {/* ---------- ACTION BOX ---------- */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center gap-4 mt-6"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        {/* EDIT PRICE BUTTON */}
+        <button
+          onClick={handleamazonOpen}
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "#ff842b",
+            color: "black",
+            border: "1px solid #dc60ff",
+          }}
+        >
+          ✏️ Edit Price (${amazonPrice})
+        </button>
+
+        {/* BUY NOW BUTTON */}
+        <a
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          rel="noopener noreferrer"
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "##000000",
+            color: "#fff",
+            // border: "1px solid #dc60ff",
+          }}
+        >
+          🛒 Buy Now
+        </a>
+      </motion.div>
+
+      {/* POPUP DIALOG */}
+      <EditPriceDialog
+  open={amazonOpen}
+  handleClose={handleamazonClose}
+  price={amazonPrice}
+  setPrice={setAmazonPrice}
+  courseId="amazon"
+/>
         </motion.div>
       </motion.div>
     </motion.div>
@@ -1533,14 +1246,17 @@ const Landingpage = () => {
       </motion.div>
     </motion.div>
   </motion.section>
+{/* amazon end */}
 
+{/* ghost  */}
   <motion.section
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.3 }}
-    style={{ backgroundColor: "#2b0001" }}
+    style={{ backgroundColor: currentSectionColor }}
     className="section products hero"
+  id="ghost-creator-section"
   >
     <div className="container">
       <motion.div 
@@ -1777,206 +1493,84 @@ const Landingpage = () => {
           viewport={{ once: true }}
           className="wrap-v-small"
         >
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.4 }}
-            viewport={{ once: true }}
-            data-tick={1} 
-            className="course-module checked"
+             <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={18}
+            height={18}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#dc60ff"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <a
-              data-tick={1}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 1:</strong> Intro to{" "}
-              <span data-product-name="Ghost Creator" className="products-name">
-                Ghost Creator
-              </span>{" "}
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.5 }}
-            viewport={{ once: true }}
-            data-tick={2} 
-            className="course-module checked"
-          >
-            <a
-              data-tick={2}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 2:</strong> Learn the tech-stack &nbsp;
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.6 }}
-            viewport={{ once: true }}
-            data-tick={3} 
-            className="course-module"
-          >
-            <a
-              data-tick={3}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              href="#"
-              className="tick-box white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 3:</strong> Mindset mastery
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.7 }}
-            viewport={{ once: true }}
-            className="course-module relative"
-          >
-            <a
-              data-tick={4}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              href="#"
-              className="tick-box white blur w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div className="blurred">Module 1, Episode 4: The first steps</div>
-            <div className="lock">
-              <div>Purchase to unlock the full course 🔐</div>
-            </div>
-          </motion.div>
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3, delay: 1.8 }}
-            viewport={{ once: true }}
-            data-wf-native-id-path="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            style={{
-              backgroundColor: "#ff3f3f",
-              borderColor: "#2b0001",
-              color: "#2b0001"
-            }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-            data-wf-event-ids={157035618}
-            className="button-primary products _100 w-inline-block"
-            rel="noopener"
-          >
-            <div className="dupe-icon w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={8}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {/* flip horizontally: move right by 100 then scale X by –1 */}
-                <g transform="translate(100, 0) scale(-1, 1)">
-                  {/* Back sheet */}
-                  <rect x={8} y={12} width={60} height={60} rx={10} />
-                  {/* Front sheet */}
-                  <rect x={20} y={28} width={60} height={60} rx={10} />
-                </g>
-              </svg>
-            </div>
-            <div>
-              Duplicate Course<strong> </strong>
-            </div>
-          </motion.a>
+            <path d="M20 6 L9 17 L4 12" />
+          </svg>
+        
+        </div>
+        <div className="text-[#dc60ff] font-semibold flex items-center gap-1">
+          <span>💰</span>Price: ${ghostPrice}
+        </div>
+      </motion.div>
+
+      {/* ---------- ACTION BOX ---------- */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center gap-4 mt-6"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        {/* EDIT PRICE BUTTON */}
+        <button
+          onClick={handleghostOpen}
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "#ff3f3f",
+            color: "#000000",
+            border: "1px solid #dc60ff",
+          }}
+        >
+          ✏️ Edit Price (${ghostPrice})
+        </button>
+
+        {/* BUY NOW BUTTON */}
+        <a
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          rel="noopener noreferrer"
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "##000000",
+            color: "#fff",
+            // border: "1px solid #dc60ff",
+          }}
+        >
+          🛒 Buy Now
+        </a>
+      </motion.div>
+
+      {/* POPUP DIALOG */}
+      <EditPriceDialog
+  open={ghostOpen}
+  handleClose={handleghostClose}
+  price={ghostPrice}
+  setPrice={setGhostPrice}
+  courseId="ghost"
+/>
         </motion.div>
       </motion.div>
     </motion.div>
@@ -2131,14 +1725,18 @@ const Landingpage = () => {
       </motion.div>
     </motion.div>
   </motion.section>
+{/* ghost end */}
 
+
+{/* Market  */}
   <motion.section
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.3 }}
-    style={{ backgroundColor: "#001706" }}
+    style={{ backgroundColor:currentSectionColor }}
     className="section products hero"
+    id="market-mastery-section"
   >
     <div className="container">
       <motion.div 
@@ -2373,206 +1971,84 @@ const Landingpage = () => {
           viewport={{ once: true }}
           className="wrap-v-small"
         >
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.4 }}
-            viewport={{ once: true }}
-            data-tick={1} 
-            className="course-module checked"
+            <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        <div className="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={18}
+            height={18}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#dc60ff"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <a
-              data-tick={1}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e3c"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 1:</strong> Intro to{" "}
-              <span data-product-name="Market Mastery" className="products-name">
-                Market Mastery
-              </span>{" "}
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.5 }}
-            viewport={{ once: true }}
-            data-tick={2} 
-            className="course-module checked"
-          >
-            <a
-              data-tick={2}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e41"
-              href="#"
-              className="tick-box checked white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 2:</strong> Learn the tech-stack &nbsp;
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.6 }}
-            viewport={{ once: true }}
-            data-tick={3} 
-            className="course-module"
-          >
-            <a
-              data-tick={3}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e46"
-              href="#"
-              className="tick-box white w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div>
-              <strong>Module 1, Episode 3:</strong> Mindset mastery
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.7 }}
-            viewport={{ once: true }}
-            className="course-module relative"
-          >
-            <a
-              data-tick={4}
-              data-wf-native-id-path="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              data-wf-ao-click-engagement-tracking="true"
-              data-wf-element-id="40cb5db0-fb19-8354-8e15-1c7772373e4b"
-              href="#"
-              className="tick-box white blur w-inline-block"
-            >
-              <div className="w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={9}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 6 L9 17 L4 12"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </a>
-            <div className="blurred">Module 1, Episode 4: The first steps</div>
-            <div className="lock">
-              <div>Purchase to unlock the full course 🔐</div>
-            </div>
-          </motion.div>
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3, delay: 1.8 }}
-            viewport={{ once: true }}
-            data-wf-native-id-path="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            data-wf-ao-click-engagement-tracking="true"
-            data-wf-element-id="c96c1b3d-b8f0-842e-4de5-664436c7503b"
-            style={{
-              backgroundColor: "#25ff1e",
-              borderColor: "#001706",
-              color: "#001706"
-            }}
-            href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
-            data-wf-event-ids={157035618}
-            className="button-primary products _100 w-inline-block"
-            rel="noopener"
-          >
-            <div className="dupe-icon w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={8}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {/* flip horizontally: move right by 100 then scale X by –1 */}
-                <g transform="translate(100, 0) scale(-1, 1)">
-                  {/* Back sheet */}
-                  <rect x={8} y={12} width={60} height={60} rx={10} />
-                  {/* Front sheet */}
-                  <rect x={20} y={28} width={60} height={60} rx={10} />
-                </g>
-              </svg>
-            </div>
-            <div>
-              Duplicate Course<strong> </strong>
-            </div>
-          </motion.a>
+            <path d="M20 6 L9 17 L4 12" />
+          </svg>
+        
+        </div>
+        <div className="text-[#dc60ff] font-semibold flex items-center gap-1">
+          <span>💰</span>Price: ${marketPrice}
+        </div>
+      </motion.div>
+
+      {/* ---------- ACTION BOX ---------- */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center gap-4 mt-6"
+        style={{ maxWidth: "550px", margin: "auto", color: "#fff" }}
+      >
+        {/* EDIT PRICE BUTTON */}
+        <button
+          onClick={handlemarketOpen}
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "#25ff1e",
+            color: "#000000",
+            border: "1px solid #dc60ff",
+          }}
+        >
+          ✏️ Edit Price (${marketPrice})
+        </button>
+
+        {/* BUY NOW BUTTON */}
+        <a
+          href="https://start.dropcourse.com/b/3cI9AU5SW9Gi2qu9Mi6oo04"
+          rel="noopener noreferrer"
+          className="course-module flex justify-between items-center bg-[#1e0129] border border-[#dc60ff]/40 rounded-xl px-4 py-3 shadow-md"
+          style={{
+            maxWidth: "550px",
+            margin: "auto",
+            backgroundColor: "##000000",
+            color: "#fff",
+            // border: "1px solid #dc60ff",
+          }}
+        >
+          🛒 Buy Now
+        </a>
+      </motion.div>
+
+      {/* POPUP DIALOG */}
+      <EditPriceDialog
+  open={marketOpen}
+  handleClose={handlemarketClose}
+  price={marketPrice}
+  setPrice={setMarketPrice}
+  courseId="Market"
+/>
         </motion.div>
       </motion.div>
     </motion.div>
@@ -2725,7 +2201,7 @@ const Landingpage = () => {
       </motion.div>
     </motion.div>
   </motion.section>
-
+{/* Market end  */}
 
 
 
@@ -2736,7 +2212,8 @@ const Landingpage = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="section no-padding" 
-      style={{ backgroundColor: "#3a2581" }}
+      style={{ backgroundColor: currentSectionColor }}
+      id="cta-section"
     >
     <div className="container-footer">
       <div className="outline-div blur">
@@ -2804,7 +2281,8 @@ const Landingpage = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="section no-bottom"
-      style={{ backgroundColor: "#1a0c49" }}
+      style={{ backgroundColor: currentSectionColor }}
+      id="faq-section"
     >
       <div className="w-layout-blockcontainer container w-container">
         <div className="wrap-v-regular align-center margin-s">
@@ -2889,6 +2367,7 @@ const Landingpage = () => {
         </div>
       </div>
     </motion.section>
+    </div>
   <Footer1/>
 
 
